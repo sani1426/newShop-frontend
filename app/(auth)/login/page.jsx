@@ -5,6 +5,7 @@ import '../auth.css'
 import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { useState } from 'react'
+import useFetchData from '@/hooks/useFetchData'
 
 const page = () => {
   const [data, setData] = useState({

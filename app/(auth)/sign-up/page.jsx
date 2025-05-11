@@ -6,6 +6,7 @@ import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
+import SummaryApi from '@/common'
 
 const page = () => {
   const [data, setData] = useState({
@@ -24,7 +25,7 @@ const page = () => {
         [name]: value,
       }
     })
-    console.log(data)
+
   }
 
   const handleSubmit = async (e) => {

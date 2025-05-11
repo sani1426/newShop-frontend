@@ -20,13 +20,12 @@
     width: 100%;
     display: flex;
     position: relative;
-    left: 8px;
+    left: 15px;
     align-items: center;
-  }
-  
-  .field:nth-child(2) {
     margin-top: 20px;
   }
+  
+
   
   .field .input {
     height: 100%;

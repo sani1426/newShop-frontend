@@ -147,7 +147,7 @@ const page = () => {
         <div className='forgot-pass'>
           <Link href='#'>Forgot Password?</Link>
         </div>
-        <button className='button'>Sign in</button>
+        <button className='button'>Sign Up</button>
         <div className='sign-up'>
           Alredy have Account?
           <Link href='/login'>Login now</Link>

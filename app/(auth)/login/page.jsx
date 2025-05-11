@@ -1,21 +1,88 @@
+'use client'
+
+import SummaryApi from '@/common'
 import '../auth.css'
 import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
+import { useState } from 'react'
 
 const page = () => {
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  })
+
+  const handleOnChange = (e) => {
+    const { name, value } = e.target
+    setData((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      }
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const { responseData } = await useFetchData(
+      SummaryApi.SignIn.url,
+      SummaryApi.SignIn.method,
+      data
+    )
+    //   if (responseData.success) {
+    //     toast.success('succesfully registered ✨✨✨', {
+    //       style: {
+    //         background: 'green',
+    //         color: 'white',
+    //       },
+    //     })
+    //     setTimeout(() => {
+    //       navigate('/login')
+    //     }, 1000)
+    //   }
+    //   if (responseData.error) {
+    //     toast.error(newdata.message, {
+    //       style: {
+    //         background: 'red',
+    //       },
+    //     })
+    //   }
+    // } else {
+    //   toast.error('please check password and confirm password', {
+    //     style: {
+    //       background: 'red',
+    //     },
+    // })
+  }
+
   return (
     <div className='content'>
       <div className='text'>Login</div>
-      <form action='#'>
+      <form onSubmit={handleSubmit}>
         <div className='field'>
-          <input required type='text' name='email' className='input' />
+          <input
+            required
+            type='email'
+            name='email'
+            value={data.email}
+            onChange={handleOnChange}
+            className='input'
+          />
           <span className='span'>
             <FaUser />
           </span>
           <label className='label'>Email</label>
         </div>
         <div className='field'>
-          <input required type='password'  name='password' className='input' />
+          <input
+            required
+            type='password'
+            name='password'
+            value={data.password}
+            onChange={handleOnChange}
+            className='input'
+          />
           <span className='span'>
             <RiLockPasswordFill />
           </span>

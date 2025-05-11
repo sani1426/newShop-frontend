@@ -20,6 +20,8 @@
     width: 100%;
     display: flex;
     position: relative;
+    left: 8px;
+    align-items: center;
   }
   
   .field:nth-child(2) {

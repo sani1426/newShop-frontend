@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
+body{
+  animation: fade 1.5s ;
 
+}
 
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 @layer base {
   :root {
@@ -71,4 +88,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.flex-center{
+  @apply flex justify-center items-center
+}
+.flex-between{
+  @apply flex justify-between items-center
+}
+.flex-start{
+  @apply flex justify-start items-center
 }

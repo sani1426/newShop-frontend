@@ -2,12 +2,12 @@
 
 import SummaryApi from '@/common'
 // import '../auth.css'
-import { FaUser } from 'react-icons/fa'
-import { RiLockPasswordFill } from 'react-icons/ri'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
 
 const page = () => {
+  const router = useRouter()
   const [data, setData] = useState({
     email: '',
     password: '',
@@ -31,32 +31,32 @@ const page = () => {
       SummaryApi.SignIn.method,
       data
     )
-    //   if (responseData.success) {
-    //     toast.success('succesfully registered ✨✨✨', {
-    //       style: {
-    //         background: 'green',
-    //         color: 'white',
-    //       },
-    //     })
-    //     setTimeout(() => {
-    //       navigate('/login')
-    //     }, 1000)
-    //   }
-    //   if (responseData.error) {
-    //     toast.error(newdata.message, {
-    //       style: {
-    //         background: 'red',
-    //       },
-    //     })
-    //   }
-    // } else {
-    //   toast.error('please check password and confirm password', {
-    //     style: {
-    //       background: 'red',
-    //     },
-    // })
-  }
+    if (responseData.success) {
+      toast.success('login successfully ✨✨✨', {
+        style: {
+          background: '#96F207',
+          color: 'white',
+        },
+      })
+      setTimeout(() => {
+        router.push('/')
+      }, 1000)
+    }
 
+    if (responseData.error) {
+      toast.error(responseData.message, {
+        style: {
+          background: 'red',
+        },
+      })
+    } else {
+      toast.error('please check password and confirm password', {
+        style: {
+          background: 'red',
+        },
+      })
+    }
+  }
   return (
     <div className='bg-slate-100 dark:bg-slate-900 shadow-md'>
       <div className='text'>Login</div>

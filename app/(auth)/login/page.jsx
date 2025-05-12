@@ -1,7 +1,7 @@
 'use client'
 
 import SummaryApi from '@/common'
-import '../auth.css'
+// import '../auth.css'
 import { FaUser } from 'react-icons/fa'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { useState } from 'react'
@@ -58,7 +58,7 @@ const page = () => {
   }
 
   return (
-    <div className='content'>
+    <div className='bg-slate-100 dark:bg-slate-900 shadow-md'>
       <div className='text'>Login</div>
       <form onSubmit={handleSubmit}>
         <div className='field'>

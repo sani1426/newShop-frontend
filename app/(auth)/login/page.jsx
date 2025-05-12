@@ -1,7 +1,7 @@
 'use client'
 
 import SummaryApi from '@/common'
-// import '../auth.css'
+
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
@@ -58,47 +58,58 @@ const page = () => {
     }
   }
   return (
-    <div className='bg-slate-100 dark:bg-slate-900 shadow-md'>
-      <div className='text'>Login</div>
-      <form onSubmit={handleSubmit}>
-        <div className='field'>
-          <input
-            required
-            type='email'
-            name='email'
-            value={data.email}
-            onChange={handleOnChange}
-            className='input'
-          />
-          <span className='span'>
-            <FaUser />
-          </span>
-          <label className='label'>Email</label>
+    <section className='w-full h-screen grid md:grid-cols-2 overflow-hidden'>
+      <div className='hidden md:block w-full h-full bg-login'></div>
+      <div className='w-full h-full flex items-center justify-center'>
+        <div className='bg-slate-100 dark:bg-slate-900 shadow-md w-full h-full py-10 px-10'>
+          <div className='w-full text-center border-b-2 pb-8 '>
+            <h1 className='text-3xl'>Login</h1>
+          </div>
+          <form
+            onSubmit={handleSubmit}
+            className='w-full h-full py-12 flex flex-col gap-8'
+          >
+            <div className='grid gap-1'>
+              <label className='text-lg '>Email</label>
+              <input
+                required
+                type='email'
+                name='email'
+                value={data.email}
+                onChange={handleOnChange}
+                className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
+              />
+            </div>
+            <div className='grid'>
+              <label className='label'>Password</label>
+              <input
+                required
+                type='password'
+                name='password'
+                value={data.password}
+                onChange={handleOnChange}
+                className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
+              />
+
+              <div className='mt-1 text-red-500 hover:text-red-700'>
+                <a href='#'>Forgot Password?</a>
+              </div>
+            </div>
+
+            <button className='px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-600'>
+              Sign in
+            </button>
+            <div className='flex-center mt-5 gap-3'>
+              <p className='text-sm'>Not a member?</p>
+
+              <a className='text-blue-400' href='/sign-up'>
+                signup now
+              </a>
+            </div>
+          </form>
         </div>
-        <div className='field'>
-          <input
-            required
-            type='password'
-            name='password'
-            value={data.password}
-            onChange={handleOnChange}
-            className='input'
-          />
-          <span className='span'>
-            <RiLockPasswordFill />
-          </span>
-          <label className='label'>Password</label>
-        </div>
-        <div className='forgot-pass'>
-          <a href='#'>Forgot Password?</a>
-        </div>
-        <button className='button'>Sign in</button>
-        <div className='sign-up'>
-          Not a member?
-          <a href='/sign-up'>signup now</a>
-        </div>
-      </form>
-    </div>
+      </div>
+    </section>
   )
 }
 

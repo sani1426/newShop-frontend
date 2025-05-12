@@ -99,3 +99,11 @@ body{
 .flex-start{
   @apply flex justify-start items-center
 }
+
+
+.bg-login{
+  background: url(../public/images/login/4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -3,7 +3,7 @@ import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 
 const poppins = Poppins({
-  variable: '--font-poppins-sans',
+ 
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '900'],
 })
@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable}`}>
+      <body className={poppins.className}>
         <main>{children}</main>
 
         <Toaster position="top-right" richColors />

@@ -8,6 +8,7 @@ import useFetchData from '@/hooks/useFetchData'
 import Link from 'next/link'
 
 const page = () => {
+  const [send, setSend] = useState(false)
   const router = useRouter()
   const [data, setData] = useState({
     email: '',
@@ -26,36 +27,22 @@ const page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    setSend(true)
     const { responseData } = await useFetchData(
       SummaryApi.SignIn.url,
       SummaryApi.SignIn.method,
       data
     )
+    setSend(false)
     if (responseData.success) {
-      toast.success('login successfully ✨✨✨', {
-        // style: {
-        //   background: '#96F207',
-        //   color: 'white',
-        // },
-      })
+      toast.success('login successfully ✨✨✨')
       setTimeout(() => {
         router.push('/')
       }, 1000)
     }
 
     if (responseData.error) {
-      toast.error(responseData.message, {
-        // style: {
-        //   background: 'red',
-        // },
-      })
-    } else {
-      toast.error('please check password and confirm password', {
-        // style: {
-        //   background: 'red',
-        // },
-      })
+      toast.error(responseData.message)
     }
   }
   return (
@@ -97,8 +84,12 @@ const page = () => {
               </div>
             </div>
 
-            <button className='px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-600'>
-              Sign in
+            <button
+              className={`${
+                send ? 'opacity-75 cursor-not-allowed' : ''
+              } px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-600`}
+            >
+              {send ? 'logging in ...' : 'Sign in'}
             </button>
             <div className='flex-center mt-5 gap-3'>
               <p className='text-sm'>Not a member?</p>

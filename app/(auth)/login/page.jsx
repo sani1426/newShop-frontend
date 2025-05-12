@@ -5,6 +5,7 @@ import SummaryApi from '@/common'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
+import Link from 'next/link'
 
 const page = () => {
   const router = useRouter()
@@ -92,7 +93,7 @@ const page = () => {
               />
 
               <div className='mt-1 text-red-500 hover:text-red-700'>
-                <a href='#'>Forgot Password?</a>
+                <Link href='#'>Forgot Password?</Link>
               </div>
             </div>
 
@@ -102,9 +103,9 @@ const page = () => {
             <div className='flex-center mt-5 gap-3'>
               <p className='text-sm'>Not a member?</p>
 
-              <a className='text-blue-400' href='/sign-up'>
+              <Link className='text-blue-400' href='/sign-up'>
                 signup now
-              </a>
+              </Link>
             </div>
           </form>
         </div>

@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.variable}`}>
         <main>{children}</main>
 
-        <Toaster position="top-right" />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   )

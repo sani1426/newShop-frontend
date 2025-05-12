@@ -34,10 +34,10 @@ const page = () => {
     )
     if (responseData.success) {
       toast.success('login successfully ✨✨✨', {
-        style: {
-          background: '#96F207',
-          color: 'white',
-        },
+        // style: {
+        //   background: '#96F207',
+        //   color: 'white',
+        // },
       })
       setTimeout(() => {
         router.push('/')
@@ -46,15 +46,15 @@ const page = () => {
 
     if (responseData.error) {
       toast.error(responseData.message, {
-        style: {
-          background: 'red',
-        },
+        // style: {
+        //   background: 'red',
+        // },
       })
     } else {
       toast.error('please check password and confirm password', {
-        style: {
-          background: 'red',
-        },
+        // style: {
+        //   background: 'red',
+        // },
       })
     }
   }

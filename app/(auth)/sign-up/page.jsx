@@ -7,8 +7,11 @@ import { RiLockPasswordFill } from 'react-icons/ri'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
 import SummaryApi from '@/common'
+import { useRouter } from 'next/navigation'
+import { toast } from 'sonner'
 
 const page = () => {
+  const router = useRouter()
   const [data, setData] = useState({
     name: '',
     email: '',
@@ -37,30 +40,30 @@ const page = () => {
         SummaryApi.SignUp.method,
         data
       )
-    //   if (responseData.success) {
-    //     toast.success('succesfully registered ✨✨✨', {
-    //       style: {
-    //         background: 'green',
-    //         color: 'white',
-    //       },
-    //     })
-    //     setTimeout(() => {
-    //       navigate('/login')
-    //     }, 1000)
-    //   }
-    //   if (responseData.error) {
-    //     toast.error(newdata.message, {
-    //       style: {
-    //         background: 'red',
-    //       },
-    //     })
-    //   }
-    // } else {
-    //   toast.error('please check password and confirm password', {
-    //     style: {
-    //       background: 'red',
-    //     },
-      // })
+      if (responseData.success) {
+        toast.success('succesfully registered ✨✨✨', {
+          style: {
+            background: '#96F207',
+            color: 'white',
+          },
+        })
+        setTimeout(() => {
+          router.push('/login')
+        }, 1000)
+      }
+      if (responseData.error) {
+        toast.error(newdata.message, {
+          style: {
+            background: 'red',
+          },
+        })
+      }
+    } else {
+      toast.error('please check password and confirm password', {
+        style: {
+          background: 'red',
+        },
+      })
     }
   }
 

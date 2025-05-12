@@ -17,6 +17,17 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			grown:{
+				50 : '#96F207',
+				100 : '#31D10D'
+			  },
+			  blurey: {
+				50 : '#0075FF',
+				800 : '#000E1F'
+			  },
+			  yellowrey : {
+				50 : '#FFC700'
+			  },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -56,7 +67,11 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			  fontFamily: {
+				poppins: ['var(--font-poppins)'],
+				poppinsbold: ['var(--font-poppins-bold)'],
+			  },
   		}
   	}
   },

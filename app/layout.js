@@ -1,11 +1,12 @@
-import { Poppins , Montserrat_Alternates } from "next/font/google";
-import "./globals.css";
+import { Poppins, Montserrat_Alternates } from 'next/font/google'
+import './globals.css'
+import { Toaster } from '@/components/ui/sonner'
 
 const poppins = Poppins({
-  variable: "--font-poppins-sans",
-  subsets: ["latin"],
-  weight : ['400' , '500' , '600' , '700' , '900']
-});
+  variable: '--font-poppins-sans',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '900'],
+})
 
 // const Montserrat = Montserrat_Alternates({
 //   variable: "--font-montserrat-mono",
@@ -18,15 +19,17 @@ export const metadata = {
     template: `${'newShop'}  | %s`,
     default: `${'newShop'}. ${'homePage'}`,
   },
-  description:"real shop",
+  description: 'real shop',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${poppins.variable}`}>
-        {children}
+        <main>{children}</main>
+
+        <Toaster />
       </body>
     </html>
-  );
+  )
 }

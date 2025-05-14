@@ -3,17 +3,17 @@ import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 import Navbar from '@/components/shared/Navbar'
 
-const poppins = Poppins({
+// const poppins = Poppins({
  
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '900'],
-})
+//   subsets: ['latin'],
+//   weight: ['400', '500', '600', '700', '900'],
+// })
 
-// const Montserrat = Montserrat_Alternates({
-//   variable: "--font-montserrat-mono",
-//   subsets: ["latin"],
-//   weight : ['400' , '500' , '600' , '900']
-// });
+const Montserrat = Montserrat_Alternates({
+
+  subsets: ["latin"],
+  weight : ['400' , '500' , '600' , '900']
+});
 
 export const metadata = {
   title: {
@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>
+      <body className={Montserrat.className}>
         <Navbar />
         <main>{children}</main>
 

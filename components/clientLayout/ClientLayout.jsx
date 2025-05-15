@@ -1,11 +1,18 @@
 'use client'
 
 import { AppContextProvider } from '@/context/appContext'
+import Topbar from '../shared/Topbar'
+import Navbar from '../shared/Navbar'
 
 const ClientLayout = ({ children }) => {
   return (
     <>
-      <AppContextProvider>{children}</AppContextProvider>
+      <AppContextProvider>
+      <Topbar />
+        <Navbar />
+        {children}
+        
+        </AppContextProvider>
     </>
   )
 }

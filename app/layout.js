@@ -1,8 +1,7 @@
 import { Poppins, Montserrat_Alternates } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
-import Topbar from '@/components/shared/Topbar'
-import Navbar from '@/components/shared/Navbar'
+
 import ClientLayout from '@/components/clientLayout/ClientLayout'
 
 // const poppins = Poppins({
@@ -28,8 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={Montserrat.className}>
-        <Topbar />
-        <Navbar />
+ 
         <ClientLayout>
           <main>{children}</main>
         </ClientLayout>

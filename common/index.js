@@ -9,9 +9,9 @@ const SummaryApi = {
         url : `${backendDomain}/api/users/sign-in`,
         method : "post"
     },
-    verifyEmail : {
-        url : `${backendDomain}/api/users/verify-email`,
-        method : "post"
+    UserDetail : {
+        url : `${backendDomain}/api/users/user-details`,
+        method : "get"
     },
   
 }

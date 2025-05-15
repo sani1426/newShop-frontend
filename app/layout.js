@@ -3,18 +3,18 @@ import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 import Topbar from '@/components/shared/Topbar'
 import Navbar from '@/components/shared/Navbar'
+import ClientLayout from '@/components/clientLayout/ClientLayout'
 
 // const poppins = Poppins({
- 
+
 //   subsets: ['latin'],
 //   weight: ['400', '500', '600', '700', '900'],
 // })
 
 const Montserrat = Montserrat_Alternates({
-
-  subsets: ["latin"],
-  weight : ['400' , '500' , '600' , '900']
-});
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '900'],
+})
 
 export const metadata = {
   title: {
@@ -30,9 +30,10 @@ export default function RootLayout({ children }) {
       <body className={Montserrat.className}>
         <Topbar />
         <Navbar />
-        <main>{children}</main>
-
-        <Toaster position="top-right" richColors />
+        <ClientLayout>
+          <main>{children}</main>
+        </ClientLayout>
+        <Toaster position='top-right' richColors />
       </body>
     </html>
   )

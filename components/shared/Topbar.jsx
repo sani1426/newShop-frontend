@@ -1,9 +1,9 @@
-import { GrSearch } from 'react-icons/gr'
+
 import { MdLogin } from 'react-icons/md'
 
 import Logo from './logo.jsx'
 import { FaCartShopping } from 'react-icons/fa6'
-import Link from 'next/link.js'
+import Link from 'next/link'
 
 const Topbar = () => {
   return (

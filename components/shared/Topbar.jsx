@@ -9,19 +9,19 @@ import SummaryApi from '@/common/index.js'
 import { useEffect } from 'react'
 
 const Topbar = () => {
-  const { user , setUser } = useAppContext()
+  const { user, setUser } = useAppContext()
 
   const getUserDetails = async () => {
     const { result } = await useFetchData(SummaryApi.UserDetail.url, 'get')
-    setUser(result)
+
+    if (result) {
+      setUser(result)
+    }
   }
 
   useEffect(() => {
     getUserDetails()
   }, [])
-
-
-
 
   return (
     <header className='h-16 bg-white shadow-md fixed w-full z-50'>

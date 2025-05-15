@@ -1,7 +1,7 @@
 
 const page = ({searchParams}) => {
-  const {id} = searchParams
-  console.log(id);
+  const {code} = searchParams
+  console.log(code , searchParams);
   return (
     <section className='w-full h-screen grid md:grid-cols-2 overflow-hidden'>
     <div className='hidden md:block w-full h-full bg-login'></div>

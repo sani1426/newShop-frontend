@@ -4,9 +4,25 @@ import Logo from './logo.jsx'
 import { FaCartShopping } from 'react-icons/fa6'
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
+import useFetchData from '@/hooks/useFetchData.js'
+import SummaryApi from '@/common/index.js'
+import { useEffect } from 'react'
 
 const Topbar = () => {
-  const { user, setUser } = useAppContext()
+  const { setUser, user } = useAppContext()
+
+  const getUserDetails = async () => {
+    const { result } = await useFetchData(SummaryApi.UserDetail.url, 'get')
+    setUser(result)
+  }
+
+  useEffect(() => {
+    getUserDetails()
+  }, [])
+
+
+
+  
   return (
     <header className='h-16 bg-white shadow-md fixed w-full z-50'>
       <div className='container mx-auto flex-between h-full   px-4'>

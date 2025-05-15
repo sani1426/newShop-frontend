@@ -43,12 +43,12 @@ const Topbar = () => {
           {user ? (
             <h1>{user?.name}</h1>
           ) : (
-            <button className='bg-transparent border-2 px-4 py-2 rounded-md text-sm flex-center gap-2'>
+            <Link href="/login" className='bg-transparent border-2 px-4 py-2 rounded-md text-sm flex-center gap-2'>
               <span className='text-xl'>
                 <MdLogin />
               </span>
               <span>Login / Sign up</span>
-            </button>
+            </Link>
           )}
 
           <button className='text-3xl'>

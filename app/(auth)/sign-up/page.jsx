@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import '../auth.css'
 import { useState } from 'react'
 import useFetchData from '@/hooks/useFetchData'
 import SummaryApi from '@/common'

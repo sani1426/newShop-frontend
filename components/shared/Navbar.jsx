@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 
@@ -30,7 +29,7 @@ const navItem = [
   },
 ]
 
-const Nav = () => {
+const Navbar = () => {
   return (
     <section className='border-b px-5'>
       <div className='flex items-center gap-8 py-2'>
@@ -54,4 +53,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Navbar

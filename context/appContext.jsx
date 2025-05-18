@@ -24,8 +24,12 @@ export const AppContextProvider = ({ children }) => {
     getUserDetails()
   }, [])
 
+  const toggleTheme = ()=> {
+    setTheme(theme ==="light" ? "dark" : "light")
+  }
+
   return (
-    <AppContext.Provider value={{ user, setUser, theme }}>
+    <AppContext.Provider value={{ user, setUser, theme, toggleTheme }}>
       {children}
     </AppContext.Provider>
   )

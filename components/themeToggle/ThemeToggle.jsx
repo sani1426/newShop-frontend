@@ -4,11 +4,11 @@ import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
 
 const ThemeToggle = () => {
-    const{theme}= useAppContext()
+    const{theme , toggleTheme}= useAppContext()
   return (
-    <div className='w-[40px] h-[20px] relative flex-between rounded-[50px] cursor-pointer bg-sky-200 px-1 transition-all'>
+    <div onClick={toggleTheme} className={`w-[40px] h-[20px] relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${theme === "light" ? "bg-sky-200" : "bg-blue-700"}`}>
       <Image src='/icons/moon.png' alt='moon' width={14} height={14} />
-      <div className='w-[15px] h-[15px] rounded-full absolute left-[1px] bg-white'></div>
+      <div className={`w-[15px] h-[15px] rounded-full absolute  bg-white ${theme === 'light' ? "left-[1px]" : "right-[1px]"}`}></div>
       <Image src='/icons/sun.png' alt='moon' width={14} height={14} />
     </div>
   )

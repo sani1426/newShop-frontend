@@ -13,13 +13,13 @@ const Topbar = () => {
 
   return (
     <header className='h-16  bg_soft  shadow-md fixed w-full z-50'>
-      <div className='container mx-auto flex-between h-full gap-5   px-4'>
-        <Link className='flex-center grow-1' href='/'>
+      <div className='container mx-auto flex-between h-full gap-8   px-4'>
+        <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />
           <span className='text-2xl text-grown-50'>NewShop</span>
         </Link>
 
-        <div className='hidden grow-3 w-full  rounded-md border border-grown-50  shadow-sm focus-within:shadow-md  md:block'>
+        <div className='hidden max-w-md w-full  rounded-md border border-grown-50  shadow-sm focus-within:shadow-md  md:block'>
           <input
             type='text'
             placeholder='Search for Product'
@@ -27,7 +27,7 @@ const Topbar = () => {
           />
         </div>
 
-        <div className='flex justify-end grow-2 gap-4'>
+        <div className='flex justify-end  gap-4'>
           {user ? (
             <h1>{user?.name}</h1>
           ) : (

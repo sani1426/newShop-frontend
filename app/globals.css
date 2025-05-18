@@ -9,40 +9,41 @@
   scroll-behavior: smooth;
 }
 
-body{
-  animation: fade 1.5s ;
-
+body {
+  animation: fade 1.5s;
 }
 
 @keyframes fade {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-:root{
+:root {
   --bg: #f8fafc;
-    --bg-soft: #f1f5f9;
-    --text-clr: #020617;
-    --text-clr-soft: #1e293b;
+  --bg-soft: #f1f5f9;
+  --text-clr: #020617;
+  --text-clr-soft: #1e293b;
+  --border-clr:#1e293bc7;
 }
-.dark{
+.dark {
   --bg: #0f172a;
   --bg-soft: #1e293b;
   --text-clr: #f1f5f9;
   --text-clr-soft: #cbd5e1;
+  --border-clr:#cbd5e1d7;
 }
 
-.containeri{
+.containeri {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--text-clr);
 }
 
-.wrapper{
+.wrapper {
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
@@ -50,32 +51,31 @@ body{
   padding-right: 80px;
 }
 
-@media screen and (max-width:1536px) {
-  .wrapper{
+@media screen and (max-width: 1536px) {
+  .wrapper {
     max-width: 1366px;
   }
 }
-@media screen and (max-width:1280px) {
-  .wrapper{
+@media screen and (max-width: 1280px) {
+  .wrapper {
     max-width: 1024px;
   }
 }
-@media screen and (max-width:1024px) {
-  .wrapper{
+@media screen and (max-width: 1024px) {
+  .wrapper {
     max-width: 736px;
   }
 }
-.bg_main{
+.bg_main {
   background-color: var(--bg);
   color: var(--text-clr);
 }
-.bg_soft{
+.bg_soft {
   background-color: var(--bg-soft);
   color: var(--text-clr);
 }
-/* @layer base {
+@layer base {
   :root {
-  
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
@@ -104,7 +104,6 @@ body{
   }
 
   .dark {
-   
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;
@@ -130,36 +129,25 @@ body{
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-} */
-
-
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */
-
-.flex-center{
-  @apply flex justify-center items-center
-}
-.flex-between{
-  @apply flex justify-between items-center
-}
-.flex-start{
-  @apply flex justify-start items-center
 }
 
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.flex-between {
+  @apply flex justify-between items-center;
+}
+.flex-start {
+  @apply flex justify-start items-center;
+}
 
-.bg-signup{
+.bg-signup {
   background: url(../public/images/login/4.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.bg-login{
+.bg-login {
   background: url(../public/images/login/8.jpg);
   background-size: cover;
   background-position: center;

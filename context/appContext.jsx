@@ -20,14 +20,23 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
-  useEffect(() => {
-    getUserDetails()
-  }, [])
+
 
   const toggleTheme = ()=> {
     setTheme(theme ==="light" ? "dark" : "light")
+
   }
 
+  useEffect(() => {
+    getUserDetails()
+  }, [])
+  useEffect(() => {
+   if(theme === "dark"){
+    document.documentElement.classList.add("dark")
+   }else{
+    document.documentElement.classList.remove("dark")
+   }
+  }, [theme])
   return (
     <AppContext.Provider value={{ user, setUser, theme, toggleTheme }}>
       {children}

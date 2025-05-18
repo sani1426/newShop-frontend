@@ -12,8 +12,8 @@ const Topbar = () => {
   
 
   return (
-    <header className='h-16 bg-slate-50  shadow-md fixed w-full z-50'>
-      <div className='container mx-auto flex-between h-full   px-4'>
+    <header className='h-16 bg-(--bg)  shadow-md fixed w-full z-50'>
+      <div className='container mx-auto flex-between h-full gap-5   px-4'>
         <Link className='flex-center grow-0' href='/'>
           <Logo w={70} h={40} />
           <span className='text-2xl text-grown-50'>NewShop</span>

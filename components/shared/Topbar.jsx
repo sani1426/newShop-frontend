@@ -4,6 +4,7 @@ import Logo from './logo.jsx'
 import { FaCartShopping } from 'react-icons/fa6'
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
+import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
 
 const Topbar = () => {
   const { user, setUser } = useAppContext()
@@ -39,9 +40,8 @@ const Topbar = () => {
             </Link>
           )}
 
-          <button className='text-3xl'>
-            <FaCartShopping />
-          </button>
+            <ThemeToggle />
+
         </div>
       </div>
     </header>

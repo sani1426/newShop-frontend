@@ -4,7 +4,7 @@
 
 import SummaryApi from "@/common"
 import useFetchData from "@/hooks/useFetchData"
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 const AppContext = createContext()
 

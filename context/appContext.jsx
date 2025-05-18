@@ -7,18 +7,10 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
-  const getFromLocal = () => {
-    if (typeof window !== undefined) {
-      const value = localStorage.getItem('theme')
 
-      return value || 'light'
-    }
-  }
 
   const [user, setUser] = useState()
-  const [theme, setTheme] = useState(() => {
-    return getFromLocal()
-  })
+  const [theme, setTheme] = useState("light")
 
   const getUserDetails = async () => {
     const { result } = await useFetchData(SummaryApi.UserDetail.url, 'get')

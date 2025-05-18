@@ -1,6 +1,10 @@
+"use client"
+
+import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
 
 const ThemeToggle = () => {
+    const{theme}= useAppContext()
   return (
     <div className='w-[40px] h-[20px] relative flex-between rounded-[50px] cursor-pointer bg-sky-200 px-1 transition-all'>
       <Image src='/icons/moon.png' alt='moon' width={14} height={14} />

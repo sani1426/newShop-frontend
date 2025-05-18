@@ -10,9 +10,11 @@ const AppContext = createContext()
 
 
 const getFromLocal = ()=>{
+    if(typeof window !== undefined){
     const value = localStorage.getItem("theme");
-
+    
     return value || "light"
+    }
 }
 
 export const AppContextProvider = ({children}) => {
@@ -35,7 +37,7 @@ export const AppContextProvider = ({children}) => {
       }, [])
 
     return (
-        <AppContext.Provider value={{user , setUser}}>
+        <AppContext.Provider value={{user , setUser , theme}}>
             {children}
         </AppContext.Provider>
     )

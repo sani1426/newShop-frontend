@@ -29,14 +29,9 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={Montserrat.className}>
         <AppContextProvider>
-
           <Topbar />
           <Navbar />
           <main className=''>{children}</main>
-  
-
-       
-      
         </AppContextProvider>
 
         <Toaster position='top-right' richColors />

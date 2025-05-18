@@ -31,7 +31,7 @@ const navItem = [
 
 const Navbar = () => {
   return (
-    <section className='fixed pt-16 border-b px-5  w-full shadow-md bg-white'>
+    <section className='hidden md:block md:fixed pt-16 border-b px-5  w-full shadow-md bg-white'>
       <div className='flex items-center gap-8 py-2'>
         <button className='flex-center gap-1  '>
           <span className='text-xl'>

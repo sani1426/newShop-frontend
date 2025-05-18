@@ -17,7 +17,7 @@ const Topbar = () => {
           <span className='text-2xl text-grown-50'>NewShop</span>
         </Link>
 
-        <div className='hidden max-w-md w-full  rounded-md border border-grown-50  shadow-sm focus-within:shadow-md  md:block'>
+        <div className='hidden max-w-md w-full  rounded-md border border-grown-50  shadow-sm focus-within:shadow-md  lg:block'>
           <input
             type='text'
             placeholder='Search for Product'

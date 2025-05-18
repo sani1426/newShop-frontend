@@ -15,7 +15,7 @@ const MenuBar = () => {
 
    {
     open && (
-        <div className="w-screen h-screen bg-blue-600 z-50">
+        <div className="w-screen h-screen absolute top-0 left-0 transition-all duration-500 bg-blue-600 z-50">
 
         </div>
     )

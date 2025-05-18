@@ -12,7 +12,7 @@ const Topbar = () => {
   
 
   return (
-    <header className='h-16 bg-(--bg)  shadow-md fixed w-full z-50'>
+    <header className='h-16  bg_soft  shadow-md fixed w-full z-50'>
       <div className='container mx-auto flex-between h-full gap-5   px-4'>
         <Link className='flex-center grow-0' href='/'>
           <Logo w={70} h={40} />

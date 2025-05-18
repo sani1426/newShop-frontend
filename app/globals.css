@@ -23,12 +23,30 @@ body{
   }
 }
 
-@layer base {
-  :root {
-    --bg: #f1f5f9;
+:root{
+  --bg: #f1f5f9;
     --bg-soft: #e2e8f0;
     --text-clr: #020617;
     --text-clr-soft: #1e293b;
+}
+.dark{
+  --bg: #f1f5f9;
+    --bg-soft: #e2e8f0;
+    --text-clr: #020617;
+    --text-clr-soft: #1e293b;
+}
+
+.bg_main{
+  background-color: var(--bg);
+  color: var(--text-clr);
+}
+.bg_soft{
+  background-color: var(--bg-soft);
+  color: var(--text-clr-soft);
+}
+@layer base {
+  :root {
+  
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;

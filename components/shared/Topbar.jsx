@@ -25,7 +25,7 @@ const Topbar = () => {
           />
         </div>
 
-        <div className='flex justify-end  gap-4'>
+        <div className='flex items-center justify-end  gap-4'>
           {user ? (
             <h1>{user?.name}</h1>
           ) : (

@@ -36,7 +36,7 @@ body{
   --text-clr-soft: #cbd5e1;
 }
 
-.container{
+.containeri{
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--text-clr);

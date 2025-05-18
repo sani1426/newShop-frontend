@@ -29,13 +29,42 @@ body{
     --text-clr: #020617;
     --text-clr-soft: #1e293b;
 }
-.dark{
+:dark{
   --bg: #0f172a;
   --bg-soft: #1e293b;
   --text-clr: #f1f5f9;
   --text-clr-soft: #cbd5e1;
 }
 
+.container{
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-clr);
+}
+
+.wrapper{
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media screen and (max-width:1536px) {
+  .wrapper{
+    max-width: 1366px;
+  }
+}
+@media screen and (max-width:1280px) {
+  .wrapper{
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width:1024px) {
+  .wrapper{
+    max-width: 736px;
+  }
+}
 .bg_main{
   background-color: var(--bg);
   color: var(--text-clr);

@@ -5,6 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
+import MenuBar from './MenuBar.jsx';
 
 const Topbar = () => {
   const { user, setUser } = useAppContext()
@@ -42,7 +43,7 @@ const Topbar = () => {
 
             <Link
               href='/login'
-              className=' bg-transparent border-2 px-3 py-2 rounded-md text-xl md:hidden'
+              className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl md:hidden'
             >
          <FaUserCircle />
             </Link>
@@ -50,6 +51,7 @@ const Topbar = () => {
           )}
 
             <ThemeToggle />
+            <MenuBar />
 
         </div>
       </div>

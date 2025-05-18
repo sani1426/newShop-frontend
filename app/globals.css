@@ -30,10 +30,10 @@ body{
     --text-clr-soft: #1e293b;
 }
 .dark{
-  --bg: #f1f5f9;
-    --bg-soft: #e2e8f0;
-    --text-clr: #020617;
-    --text-clr-soft: #1e293b;
+  --bg: #0f172a;
+  --bg-soft: #1e293b;
+  --text-clr: #f1f5f9;
+  --text-clr-soft: #cbd5e1;
 }
 
 .bg_main{
@@ -75,10 +75,7 @@ body{
   }
 
   .dark {
-    --bg: #0f172a;
-    --bg-soft: #1e293b;
-    --text-clr: #f1f5f9;
-    --text-clr-soft: #cbd5e1;
+   
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;

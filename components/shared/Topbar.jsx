@@ -5,11 +5,8 @@ import { FaCartShopping } from 'react-icons/fa6'
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
 
-
 const Topbar = () => {
   const { user, setUser } = useAppContext()
-
-  
 
   return (
     <header className='h-16  bg_soft  shadow-md fixed w-full z-50'>
@@ -31,7 +28,10 @@ const Topbar = () => {
           {user ? (
             <h1>{user?.name}</h1>
           ) : (
-            <Link href="/login" className='bg-transparent border-2 px-4 py-2 rounded-md text-sm flex-center gap-2'>
+            <Link
+              href='/login'
+              className='bg-transparent border-2 px-4 py-2 rounded-md text-sm flex-center gap-2'
+            >
               <span className='text-xl'>
                 <MdLogin />
               </span>

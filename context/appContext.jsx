@@ -9,15 +9,17 @@ import { createContext, useContext, useEffect, useState } from "react"
 const AppContext = createContext()
 
 
-const getFromLocal = ()=>{
-    if(typeof window !== undefined){
-    const value = localStorage.getItem("theme");
-    
-    return value || "light"
-    }
-}
+
 
 export const AppContextProvider = ({children}) => {
+
+    const getFromLocal = ()=>{
+    
+        if(typeof window !== undefined){
+        const value = localStorage.getItem("theme");
+        
+        return value || "light"
+    }}
 
     const [user , setUser]= useState()
     const [theme , setTheme]=useState(()=> {

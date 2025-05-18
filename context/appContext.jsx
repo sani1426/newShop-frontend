@@ -1,3 +1,7 @@
+"use client"
+
+
+
 import SummaryApi from "@/common"
 import useFetchData from "@/hooks/useFetchData"
 import { createContext, useContext, useState } from "react"

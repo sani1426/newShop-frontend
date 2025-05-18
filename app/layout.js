@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { AppContextProvider } from '@/context/appContext'
 import Topbar from '@/components/shared/Topbar'
 import Navbar from '@/components/shared/Navbar'
+import { ThemeProvider } from 'next-themes'
 
 // const poppins = Poppins({
 
@@ -29,9 +30,11 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={Montserrat.className}>
         <AppContextProvider>
+          <ThemeProvider>
           <Topbar />
           <Navbar />
           <main className=''>{children}</main>
+          </ThemeProvider>
         </AppContextProvider>
 
         <Toaster position='top-right' richColors />

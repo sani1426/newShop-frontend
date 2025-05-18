@@ -24,12 +24,12 @@ body{
 }
 
 :root{
-  --bg: #f1f5f9;
-    --bg-soft: #e2e8f0;
+  --bg: #f8fafc;
+    --bg-soft: #f1f5f9;
     --text-clr: #020617;
     --text-clr-soft: #1e293b;
 }
-:dark{
+.dark{
   --bg: #0f172a;
   --bg-soft: #1e293b;
   --text-clr: #f1f5f9;
@@ -71,9 +71,9 @@ body{
 }
 .bg_soft{
   background-color: var(--bg-soft);
-  color: var(--text-clr-soft);
+  color: var(--text-clr);
 }
-@layer base {
+/* @layer base {
   :root {
   
     --background: 0 0% 100%;
@@ -130,17 +130,17 @@ body{
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
+} */
 
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
 .flex-center{
   @apply flex justify-center items-center

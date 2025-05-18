@@ -1,7 +1,7 @@
 'use client'
 import { MdLogin } from 'react-icons/md'
 import Logo from './logo.jsx'
-import { FaCartShopping } from 'react-icons/fa6'
+import { FaUserCircle } from "react-icons/fa";
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
@@ -29,15 +29,24 @@ const Topbar = () => {
           {user ? (
             <h1>{user?.name}</h1>
           ) : (
+            <>
             <Link
               href='/login'
-              className='bg-transparent border-2 px-4 py-2 rounded-md text-sm flex-center gap-2'
+              className='hidden bg-transparent border-2 px-4 py-2 rounded-md text-sm md:flex md:items-center justify-center gap-2'
             >
               <span className='text-xl'>
                 <MdLogin />
               </span>
               <span>Login / Sign up</span>
             </Link>
+
+            <Link
+              href='/login'
+              className=' bg-transparent border-2 px-3 py-2 rounded-md text-xl md:hidden'
+            >
+         <FaUserCircle />
+            </Link>
+            </>
           )}
 
             <ThemeToggle />

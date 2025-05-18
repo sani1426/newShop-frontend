@@ -29,14 +29,11 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={Montserrat.className}>
         <AppContextProvider>
-          <div className='container'>
-          <div className='wrapper'>
+
           <Topbar />
           <Navbar />
           <main className=''>{children}</main>
-          </div>
-
-          </div>
+  
 
        
       

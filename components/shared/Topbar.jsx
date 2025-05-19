@@ -36,7 +36,7 @@ const Topbar = () => {
             <>
               <Link
                 href='/login'
-                className='hidden primary border-2 px-4 py-2 rounded-md text-sm md:flex md:items-center justify-center gap-2'
+                className='hidden primary text-white dark:text-black px-3 py-3 rounded-sm  md:flex md:items-center justify-center gap-2'
               >
                 <span className='text-xl'>
                   <MdLogin />

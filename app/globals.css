@@ -78,7 +78,7 @@ body {
 }
 .primary{
   background-color: var(--primary);
-  color: var(--text-clr);
+
 }
 @layer base {
   :root {

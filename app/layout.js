@@ -1,33 +1,33 @@
-import { Poppins, Montserrat_Alternates } from 'next/font/google'
+import { Vazirmatn, Montserrat_Alternates } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 import { AppContextProvider } from '@/context/appContext'
 
 
 
-// const poppins = Poppins({
+const vazir = Vazirmatn({
 
-//   subsets: ['latin'],
-//   weight: ['400', '500', '600', '700', '900'],
-// })
-
-const Montserrat = Montserrat_Alternates({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '900'],
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700', '900'],
 })
+
+// const Montserrat = Montserrat_Alternates({
+//   subsets: ['latin'],
+//   weight: ['400', '500', '600', '900'],
+// })
 
 export const metadata = {
   title: {
-    template: `${'newShop'}  | %s`,
-    default: `${'newShop'}. ${'homePage'}`,
+    template: `${'سامی فیلم'}  | %s`,
+    default: `${'سامی فیلم'}. ${'homePage'}`,
   },
-  description: 'real shop',
+  description: 'بهترین و جدیدترین فیلم های دنیا',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={Montserrat.className}>
+    <html lang='fa' dir='rtl'>
+      <body className={vazir.className}>
         <AppContextProvider>
 
           <main className=''>{children}</main>

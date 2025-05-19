@@ -58,14 +58,14 @@ const page = () => {
       <div className='w-full h-full flex items-center justify-center'>
         <div className='bg_soft shadow-md w-full h-full py-10 px-10'>
           <div className='w-full text-center border-b-2 pb-8 '>
-            <h1 className='text-3xl'>Sign Up</h1>
+            <h1 className='text-3xl'>ثبت نام</h1>
           </div>
           <form
             onSubmit={handleSubmit}
             className='w-full h-full py-6 flex flex-col gap-4'
           >
             <div className='grid gap-1'>
-              <label className='text-lg'>Name</label>
+              <label className='text-lg'>نام :</label>
               <input
                 required
                 type='text'
@@ -73,11 +73,11 @@ const page = () => {
                 value={data.name}
                 onChange={handleOnChange}
                 className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
-                placeholder='enter your name ...'
+                placeholder='نام خود را وارد کنید ...'
               />
             </div>
             <div className='grid gap-1'>
-              <label className='label'>Email</label>
+              <label className='label'>ایمیل</label>
               <input
                 required
                 type='email'
@@ -85,12 +85,12 @@ const page = () => {
                 value={data.email}
                 onChange={handleOnChange}
                 className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
-                placeholder='enter your email ...'
+                placeholder='ایمیل خود را وارد کنید ...'
               />
             </div>
             <div className='flex-between'>
               <div className='grid gap-1'>
-                <label className='label'>Password</label>
+                <label className='label'>رمز عبور</label>
                 <input
                   required
                   type='password'
@@ -98,12 +98,12 @@ const page = () => {
                   value={data.password}
                   onChange={handleOnChange}
                   className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
-                  placeholder='enter your password ...'
+                  placeholder='رمز عبور ...'
                 />
               </div>
 
               <div className='grid gap-1'>
-                <label className='label'>Confirm Password</label>
+                <label className='label'>تکرار رمز عبور</label>
                 <input
                   required
                   type='password'
@@ -111,22 +111,22 @@ const page = () => {
                   value={data.confirmPassword}
                   onChange={handleOnChange}
                   className='w-full bg-gray-200 py-2 rounded-lg outline-none px-5'
-                  placeholder='enter your confirm password ...'
+                  placeholder='تکرار رمز عبور ...'
                 />
               </div>
             </div>
 
             <div className='grid gap-1'>
-              <label className='text-lg'>gender :</label>
+              <label className='text-lg'>جنسیت :</label>
               <select
                 value={data.gender}
                 onChange={handleOnChange}
                 className='py-2 px-4 bg-gray-200 rounded-md'
                 name='gender'
               >
-                <option value=''>select...</option>
-                <option value='Men'>men</option>
-                <option value='Women'>women</option>
+                <option value=''>انتخاب کنید ...</option>
+                <option value='Men'>مرد</option>
+                <option value='Women'>زن</option>
               </select>
             </div>
             <button
@@ -137,10 +137,10 @@ const page = () => {
               {send ? 'Registering ...' : 'Sign Up'}
             </button>
             <div className='flex-center mt-5 gap-3'>
-              <p className='text-sm'>Alredy have Account?</p>
+              <p className='text-sm'>قبلا ثبت نام کردید؟</p>
 
               <Link className='text-blue-400' href='/login'>
-                Login now
+                وارد شوید
               </Link>
             </div>
           </form>

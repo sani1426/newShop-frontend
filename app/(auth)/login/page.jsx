@@ -51,14 +51,14 @@ const page = () => {
       <div className='w-full h-full flex items-center justify-center'>
         <div className='bg_soft shadow-md w-full h-full py-10 px-10'>
           <div className='w-full text-center border-b-2 pb-8 '>
-            <h1 className='text-3xl'>Login</h1>
+            <h1 className='text-3xl'>ورود</h1>
           </div>
           <form
             onSubmit={handleSubmit}
             className='w-full h-full py-12 flex flex-col gap-8'
           >
             <div className='grid gap-1'>
-              <label className='text-lg '>Email</label>
+              <label className='text-lg '>ایمیل :</label>
               <input
                 required
                 type='email'
@@ -69,7 +69,7 @@ const page = () => {
               />
             </div>
             <div className='grid'>
-              <label className='label'>Password</label>
+              <label className='label'>رمز عبور :</label>
               <input
                 required
                 type='password'
@@ -80,7 +80,7 @@ const page = () => {
               />
 
               <div className='mt-1 text-red-500 hover:text-red-700'>
-                <Link href='#'>Forgot Password?</Link>
+                <Link href='#'>رمز عبور  را فراموش کردید؟</Link>
               </div>
             </div>
 
@@ -92,10 +92,10 @@ const page = () => {
               {send ? 'logging in ...' : 'Sign in'}
             </button>
             <div className='flex-center mt-5 gap-3'>
-              <p className='text-sm'>Not a member?</p>
+              <p className='text-sm'>ثبت نام نکرده اید؟?</p>
 
               <Link className='text-blue-400' href='/sign-up'>
-                signup now
+                ثبت نام کنید
               </Link>
             </div>
           </form>

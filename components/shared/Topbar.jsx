@@ -8,6 +8,7 @@ import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
 import MenuBar from './MenuBar.jsx'
 import { navItem } from '@/data/constance.js'
 import { IoSearchOutline } from 'react-icons/io5'
+import SearchToggle from '../themeToggle/searchToggle.jsx'
 
 const Topbar = () => {
   const { user, setUser } = useAppContext()
@@ -59,9 +60,7 @@ const Topbar = () => {
             </>
           )}
 
-          <button className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl '>
-            <IoSearchOutline />
-          </button>
+            <SearchToggle />
           <ThemeToggle />
           <MenuBar />
         </div>

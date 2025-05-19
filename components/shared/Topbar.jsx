@@ -7,6 +7,7 @@ import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
 import MenuBar from './MenuBar.jsx'
 import { navItem } from '@/data/constance.js'
+import { IoSearchOutline } from 'react-icons/io5'
 
 const Topbar = () => {
   const { user, setUser } = useAppContext()
@@ -23,7 +24,12 @@ const Topbar = () => {
           <ul className='flex-center gap-7'>
             {navItem.map((item) => (
               <li key={item?.id}>
-                <Link href={item?.href}>{item?.label}</Link>
+                <Link
+                  className='hover:text-grown-50 transition-all duration-300'
+                  href={item?.href}
+                >
+                  {item?.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,6 +59,9 @@ const Topbar = () => {
             </>
           )}
 
+          <button className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl '>
+            <IoSearchOutline />
+          </button>
           <ThemeToggle />
           <MenuBar />
         </div>

@@ -13,7 +13,7 @@ const SearchToggle = () => {
 
       {
         open && (
-            <div className="w-[200px] h-[5rem] flex-center bg_soft absolute py-2 px-10 top-[5.5rem] left-0 ">
+            <div className="w-full lg:w-[500px] h-[5rem] flex-center bg_soft absolute py-2 px-8 lg:px-5 top-[5.5rem] left-0 rounded-md ">
                 <input className="w-full rounded-md px-4 py-2 bg-gray-300 " type="text" placeholder="سرچ کنید" />
             </div>
         )

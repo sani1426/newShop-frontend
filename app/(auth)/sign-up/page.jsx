@@ -134,7 +134,7 @@ const page = () => {
                 send ? 'opacity-75 cursor-not-allowed' : ''
               } px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-600`}
             >
-              {send ? 'Registering ...' : 'Sign Up'}
+              {send ? 'در حال ثبت ...' : 'ثبت نام'}
             </button>
             <div className='flex-center mt-5 gap-3'>
               <p className='text-sm'>قبلا ثبت نام کردید؟</p>

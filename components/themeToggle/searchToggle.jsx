@@ -6,7 +6,7 @@ import { IoSearchOutline } from 'react-icons/io5'
 const SearchToggle = () => {
     const [open , setOpen]=useState(false)
   return (
-    <div className="">
+    <>
       <button onClick={()=>setOpen(!open)} className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl '>
         <IoSearchOutline />
       </button>
@@ -18,7 +18,7 @@ const SearchToggle = () => {
             </div>
         )
       }
-    </div>
+    </>
   )
 }
 

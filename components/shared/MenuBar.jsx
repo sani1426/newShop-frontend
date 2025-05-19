@@ -1,5 +1,6 @@
 "use client"
 
+import { navItem } from "@/data/constance";
 import { useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 
@@ -15,8 +16,19 @@ const MenuBar = () => {
 
    {
     open && (
-        <div style={{height :'calc(100vh - 64px)'}} className="w-screen  absolute top-16 left-0 transition-all duration-500 bg-blue-600 z-50">
-
+        <div style={{height :'calc(100vh - 64px)'}} className="w-screen  absolute top-16 left-0 transition-all duration-500 bg_soft flex-center  z-50">
+  <ul className='flex flex-col justify-center gap-7'>
+            {navItem.map((item) => (
+              <li key={item?.id}>
+                <Link
+                  className='hover:text-grown-50 transition-all duration-300'
+                  href={item?.href}
+                >
+                  {item?.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
     )
    }

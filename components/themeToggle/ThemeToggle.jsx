@@ -2,6 +2,8 @@
 
 import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
+import { PiSunDimBold } from "react-icons/pi";
+import { GiMoonOrbit } from "react-icons/gi";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useAppContext()
@@ -9,65 +11,20 @@ const ThemeToggle = () => {
   return (
     <div
       onClick={toggleTheme}
-      className={`min-w-[40px] h-[20px] relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${
+      className={`min-w-[40px] h-[30px] relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${
         theme === 'light' ? 'bg-sky-200' : 'bg-blue-600'
       }`}
     >
       <Image src='/icons/sun.png' alt='sun' width={14} height={14} />
       <div
-        className={`w-[15px] h-[15px] rounded-full absolute transition-all  bg-white ${
+        className={`w-[25px] h-[25px] rounded-full absolute transition-all  bg-white ${
           theme === 'light' ? 'left-[1px]' : 'right-[1px]'
         }`}
       >
         {theme === 'light' ? (
-          <svg
-            width='800px'
-            height='800px'
-            viewBox='-22.5 0 301 301'
-            version='1.1'
-            xmlns='http://www.w3.org/2000/svg'
-            xmlns:xlink='http://www.w3.org/1999/xlink'
-            preserveAspectRatio='xMidYMid'
-          >
-            <defs>
-              <linearGradient
-                x1='2.17771739%'
-                y1='34.7938955%'
-                x2='92.7221942%'
-                y2='91.3419405%'
-                id='linearGradient-1'
-              >
-                <stop stop-color='#41A7EF' offset='0%'></stop>
-                <stop stop-color='#813DDE' offset='54.2186236%'></stop>
-                <stop stop-color='#8F2EE2' offset='74.4988788%'></stop>
-                <stop stop-color='#A11CE6' offset='100%'></stop>
-              </linearGradient>
-            </defs>
-            <g>
-              <path
-                d='M124.183681,101.699 C124.183681,66.515 136.256681,34.152 156.486681,8.525 C159.197681,5.092 156.787681,0.069 152.412681,0.012 C151.775681,0.004 151.136681,0 150.497681,0 C67.6206813,0 0.390681343,66.99 0.00168134279,149.775 C-0.386318657,232.369 66.4286813,300.195 149.019681,300.988 C189.884681,301.381 227.036681,285.484 254.376681,259.395 C257.519681,256.396 255.841681,251.082 251.548681,250.42 C179.413681,239.291 124.183681,176.949 124.183681,101.699'
-                fill='url(#linearGradient-1)'
-              ></path>
-            </g>
-          </svg>
+    <PiSunDimBold />
         ) : (
-          <svg
-            width='800px'
-            height='800px'
-            viewBox='0 0 36 36'
-            xmlns='http://www.w3.org/2000/svg'
-            xmlns:xlink='http://www.w3.org/1999/xlink'
-            aria-hidden='true'
-            role='img'
-            class='iconify iconify--twemoji'
-            preserveAspectRatio='xMidYMid meet'
-          >
-            <path
-              fill='#FFAC33'
-              d='M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z'
-            ></path>
-            <circle fill='#FFAC33' cx='18' cy='18' r='10'></circle>
-          </svg>
+          <GiMoonOrbit  />
         )}
       </div>
       <Image src='/icons/moon.png' alt='moon' width={14} height={14} />

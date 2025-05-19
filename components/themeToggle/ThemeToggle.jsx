@@ -28,7 +28,7 @@ const ThemeToggle = () => {
    />
         ) : (
           <img
-          src='/icons/moon.png'
+          src='/icons/newmoon.png'
           alt='logo-image'
        className='w-25 h-25 rounded-full object-cover'
         />

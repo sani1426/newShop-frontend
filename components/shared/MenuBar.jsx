@@ -1,6 +1,7 @@
 "use client"
 
 import { navItem } from "@/data/constance";
+import Link from "next/link";
 import { useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 

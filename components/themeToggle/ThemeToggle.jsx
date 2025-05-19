@@ -2,8 +2,7 @@
 
 import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
-import { PiSunDimBold } from "react-icons/pi";
-import { GiMoonOrbit } from "react-icons/gi";
+
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useAppContext()
@@ -11,7 +10,7 @@ const ThemeToggle = () => {
   return (
     <div
       onClick={toggleTheme}
-      className={`min-w-[40px] h-[30px] relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${
+      className={`min-w-[50px] h-[30px] relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${
         theme === 'light' ? 'bg-sky-200' : 'bg-blue-600'
       }`}
     >
@@ -22,9 +21,17 @@ const ThemeToggle = () => {
         }`}
       >
         {theme === 'light' ? (
-    <PiSunDimBold />
+     <img
+     src='/icons/sun.png'
+     alt='logo-image'
+  className='w-25 h-25 rounded-full object-cover'
+   />
         ) : (
-          <GiMoonOrbit  />
+          <img
+          src='/icons/moon.png'
+          alt='logo-image'
+       className='w-25 h-25 rounded-full object-cover'
+        />
         )}
       </div>
       <Image src='/icons/moon.png' alt='moon' width={14} height={14} />

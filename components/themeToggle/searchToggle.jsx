@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { IoSearchOutline } from 'react-icons/io5'
 
 const SearchToggle = () => {
     const [open , setOpen]=useState(false)

@@ -12,11 +12,11 @@ const Topbar = () => {
   const { user, setUser } = useAppContext()
 
   return (
-    <header className='h-16  bg_soft  shadow-md fixed w-full z-50'>
-      <div className='container mx-auto flex-between h-full gap-8   px-4'>
+    <header className='h-20  bg_soft  shadow-md fixed w-full z-50'>
+      <div className='container my-auto mx-auto flex-between h-full gap-8   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />
-          <span className='text-2xl text-grown-50'>سامی فیلم</span>
+          <span className='text-2xl text-grown-50 text-nowrap'>سامی فیلم</span>
         </Link>
 
         <div className='hidden w-full lg:block'>
@@ -29,19 +29,19 @@ const Topbar = () => {
           </ul>
         </div>
 
-        <div className='flex items-center justify-end  gap-4'>
+        <div className='w-full flex items-center justify-end  gap-4'>
           {user ? (
             <h1>{user?.name}</h1>
           ) : (
             <>
               <Link
                 href='/login'
-                className='hidden bg-transparent border-2 px-4 py-2 rounded-md text-sm md:flex md:items-center justify-center gap-2'
+                className='hidden primary border-2 px-4 py-2 rounded-md text-sm md:flex md:items-center justify-center gap-2'
               >
                 <span className='text-xl'>
                   <MdLogin />
                 </span>
-                <span>ورود / ثبت نام</span>
+                <span className='text-nowrap'>ورود / ثبت نام</span>
               </Link>
 
               <Link

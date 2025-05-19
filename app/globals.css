@@ -28,6 +28,7 @@ body {
   --text-clr: #020617;
   --text-clr-soft: #1e293b;
   --border-clr:#1e293bc7;
+  --primary: #070C12 ;
 }
 .dark {
   --bg: #0f172a;
@@ -35,6 +36,7 @@ body {
   --text-clr: #f1f5f9;
   --text-clr-soft: #cbd5e1;
   --border-clr:#cbd5e1d7;
+  --primary: #96F207 ;
 }
 
 .containeri {
@@ -72,6 +74,10 @@ body {
 }
 .bg_soft {
   background-color: var(--bg-soft);
+  color: var(--text-clr);
+}
+.primary{
+  background-color: var(--primary);
   color: var(--text-clr);
 }
 @layer base {

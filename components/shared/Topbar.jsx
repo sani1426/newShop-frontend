@@ -7,7 +7,7 @@ import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
 import MenuBar from './MenuBar.jsx'
 import { navItem } from '@/data/constance.js'
-import { IoSearchOutline } from 'react-icons/io5'
+
 import SearchToggle from '../themeToggle/searchToggle.jsx'
 
 const Topbar = () => {

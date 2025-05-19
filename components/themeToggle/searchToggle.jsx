@@ -6,7 +6,7 @@ const SearchToggle = () => {
     const [open , setOpen]=useState(false)
   return (
     <div className="relative">
-      <button className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl '>
+      <button onClick={()=>setOpen(!open)} className=' bg-transparent border-2 px-3 py-2 rounded-md text-2xl '>
         <IoSearchOutline />
       </button>
 

@@ -11,7 +11,7 @@ const MovieCard = ({movie}) => {
         <img className='object-cover w-full h-full' src={movie?.backdrop} alt={movie?.name}/>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(41,39,44,0.37)]"></div>
     </div>
-<div className='absolute right-0 bottom-0 z-10 w-[250px]'>
+<div className='absolute right-0 bottom-0 z-10 w-[500px]'>
 
     <h1 className='text-white text-2xl '>{movie?.name}</h1>
     <p className='text-white text-sm'>{movie?.description}</p>

@@ -14,7 +14,7 @@ const Topbar = () => {
   const { user, setUser } = useAppContext()
 
   return (
-    <header className='h-20  bg_soft  shadow-md fixed w-full z-50'>
+    <header className='h-20  bg_soft blur-lg  shadow-md fixed w-full z-50'>
       <div className='container my-auto mx-auto flex-between h-full gap-8   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />

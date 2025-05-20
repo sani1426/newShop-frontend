@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [movies , setMovies]=useState()
   const getMoviesByGenre = async () => {
-    const response = await fetch(`${SummaryApi.getMoviesByGenre.url}/?genre=درام`)
+    const response = await fetch(`${SummaryApi.getMoviesByGenre.url}?genre=درام`)
 
     const result = await response.json()
     if(result){

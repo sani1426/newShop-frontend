@@ -14,7 +14,7 @@ const SummaryApi = {
         method : "get"
     },
     getMoviesByGenre : {
-        url :`${backendDomain}/api/movies/genre`,
+        url :`${backendDomain}/api/movies/genres`,
         method : 'get'
     }
   

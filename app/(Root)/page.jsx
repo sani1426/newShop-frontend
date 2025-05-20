@@ -10,14 +10,17 @@ export default function Home() {
     const response = await fetch(`${SummaryApi.getMoviesByGenre.url}?genre=درام`)
 
     const result = await response.json()
-    setMovies(result.data)
+    if(result){
+      setMovies(result?.data)
+
+    }
 
   }
   useEffect(()=>{getMoviesByGenre()},[])
   return (
 <>
 <div className="text-rose-600 text-6xl w-screen h-screen pt-20">
-  {movies.map((item)=> (
+  {movies?.map((item)=> (
     <h1>{item?.name}</h1>
   ))}
 </div>

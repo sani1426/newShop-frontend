@@ -11,6 +11,7 @@ const MovieCard = ({movie}) => {
         <img className='object-cover w-full h-full' src={movie?.movieImage} alt={movie?.name}/>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#131116]"></div>
     </div>
+<div className='absolute left-0 bottom-0 z-10'>
 
     <h1 className='text-white text-2xl '>{movie?.name}</h1>
     <p className='text-white text-sm'>{movie?.description}</p>
@@ -18,6 +19,7 @@ const MovieCard = ({movie}) => {
     <div className="">
         <button className='flex-center gap-1.5 px-4 py-3 rounded-xl cursor-pointer bg-white text-xl'><MdInfoOutline /> More Info</button>
     </div>
+</div>
    </div>
   )
 }

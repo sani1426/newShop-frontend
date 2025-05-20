@@ -13,8 +13,13 @@ const SummaryApi = {
         url : `${backendDomain}/api/users/user-details`,
         method : "get"
     },
+    getMoviesByGenre : {
+        url :`${backendDomain}/api/movies/genre`,
+        method : 'get'
+    }
   
 }
+
 
 
 export default SummaryApi

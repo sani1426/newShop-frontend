@@ -17,11 +17,11 @@ const HeroBanner = ({bannerMovies}) => {
                       <img src={item?.backdrop} className='h-full object-cover w-full'  alt={item?.name} />
                     </div>
 
-                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-800 to-transparent"></div>
+                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-800 to-transparent pb-2"></div>
 
-                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3">
+                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white">
                       <h2 className='font-bold text-2xl'>{item?.name}</h2>
-                      <p className="text-ellipsis line-clamp-3  my-2">{item?.description}</p>
+                      <p className="text-ellipsis line-clamp-3 text-slate-100  my-2">{item?.description}</p>
 
                       <div className="flex-center gap-2">
                         <p>امتیاز : {item?.rating}+</p>
@@ -29,7 +29,7 @@ const HeroBanner = ({bannerMovies}) => {
                         <p>زمان : {item?.duration}دقیقه</p>
                       </div>
                       <button className='bg-white px-4 py-2 text-black font-bold rounded mt-4'>
-                        Play Now
+                        مشاهده
                       </button>
                     </div>
 

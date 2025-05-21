@@ -38,6 +38,7 @@ const HeroBanner = ({ bannerMovies }) => {
                   className='h-full object-cover w-full'
                   alt={item?.name}
                   priority
+                  loading='lazy'
                 />
               </div>
 

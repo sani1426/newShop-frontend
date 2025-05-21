@@ -10,7 +10,6 @@ export default async function Home() {
 
   if (data.success) {
     Movies = await data?.data
-    console.log(Movies);
   }
 
   return (

@@ -2,9 +2,24 @@
 
 import React from 'react'
 
-const page = () => {
+const page = async () => {
+
+  let Tv ;
+
+const {data} = await axios.get(`${SummaryApi.getMoviesByCategory}/tv`)
+
+if(data.success){
+  Tv = await data?.data
+}
+
   return (
-    <div>tv page</div>
+    <div>
+       {
+        Tv.map(item => {
+          <h1 key={item?.id}>{item?.name}</h1>
+        })
+      }
+    </div>
   )
 }
 

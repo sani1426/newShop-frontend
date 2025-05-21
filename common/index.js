@@ -20,6 +20,10 @@ const SummaryApi = {
     getHeroMovies : {
         url :`${backendDomain}/api/movies/hero-movies`,
         method : 'get'
+    },
+    getMoviesByCategory : {
+        url :`${backendDomain}/api/movies`,
+        method : 'get'
     }
   
 }

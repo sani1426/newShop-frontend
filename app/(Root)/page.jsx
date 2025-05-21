@@ -1,15 +1,21 @@
+import SummaryApi from '@/common'
+import HeroBanner from '@/components/shared/HeroBanner'
 
-import HeroBanner from "@/components/shared/HeroBanner";
-import Movies from "@/data/movies";
+import axios from 'axios'
 
+export default async function Home() {
+  let Movies
 
+  const { data } = await axios.get(SummaryApi.getHeroMovies.url)
 
-export default function Home() {
-
+  if (data.success) {
+    Movies = await data?.data
+    console.log(Movies);
+  }
 
   return (
-<>
-<HeroBanner bannerMovies={Movies} />
-</>
-  );
+    <>
+      <HeroBanner bannerMovies={Movies} />
+    </>
+  )
 }

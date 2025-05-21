@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Topbar />
-      <main className='overflow-x-hidden'>{children}</main>
+      <main className=''>{children}</main>
       <MobileNav />
     </>
   )

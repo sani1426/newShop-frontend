@@ -4,7 +4,7 @@ import HeroBanner from '@/components/shared/HeroBanner'
 import axios from 'axios'
 
 export default async function Home() {
-  let Movies
+  let Movies;
 
   const { data } = await axios.get(SummaryApi.getHeroMovies.url)
 

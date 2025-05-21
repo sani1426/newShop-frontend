@@ -1,26 +1,26 @@
 
 
-import SummaryApi from '@/common';
-import axios from 'axios';
-import React from 'react'
+// import SummaryApi from '@/common';
+// import axios from 'axios';
+
 
 const page = async () => {
 
-  let Tv ;
+//   let Tv ;
 
-const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
+// const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
 
-if(data.success){
-  Tv = await data?.data
-}
+// if(data.success){
+//   Tv = await data?.data
+// }
 
   return (
     <div>
-       {
+       {/* {
         Tv.map(item => {
           <h1 key={item?.id}>{item?.name}</h1>
         })
-      }
+      } */}
     </div>
   )
 }

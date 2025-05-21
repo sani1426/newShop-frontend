@@ -1,11 +1,26 @@
+"use client"
 
-
-import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 
 const HeroBanner = ({bannerMovies}) => {
+
+const [activeImage , setActiveImage] = useState(0)
+  const handleNext = ()=> {
+      if(activeImage < bannerMovies.length - 1){
+        setActiveImage(prev => prev + 1)
+      }
+  }
+  const handlePrev = ()=> {
+    if(activeImage > 0){
+      setActiveImage(prev => prev - 1)
+    }
+  }
+
+
+
+
   return (
     <section className='w-full h-full'>
         <div className="flex min-h-full max-h-[95vh] overflow-hidden">
@@ -13,17 +28,17 @@ const HeroBanner = ({bannerMovies}) => {
               bannerMovies.map((item , index) => {
 
                 return(
-                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative ">
+                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative "  style={{transform : `translateX(-${activeImage * 100}%)`}}>
                     <div className="w-full h-full ">
                       <img src={item?.backdrop} className='h-full object-cover w-full'  alt={item?.name} />
                     </div>
 
                     {/*  next and prev button */}
                     <div className="absolute top-0 w-full h-full flex-between px-4 ">
-                      <button className='bg-white  p-1 rounded-full text-2xl z-10 text-black '>
+                      <button onClick={handleNext} className='bg-white  p-1 rounded-full text-2xl z-10 text-black '>
                         <FaAngleRight />
                       </button>
-                      <button className='bg-white  p-1 rounded-full text-2xl z-10'>
+                      <button onClick={handlePrev} className='bg-white  p-1 rounded-full text-2xl z-10'>
                         <FaAngleLeft />
                       </button >
                     </div> 

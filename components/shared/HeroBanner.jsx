@@ -9,7 +9,7 @@ const HeroBanner = ({ bannerMovies }) => {
   const handleNext = () => {
     if (activeImage < bannerMovies.length - 1) {
       setActiveImage((prev) => prev + 1)
-    }else{
+    } else {
       setActiveImage(0)
     }
   }
@@ -19,6 +19,9 @@ const HeroBanner = ({ bannerMovies }) => {
     }
   }
 
+  setTimeout(() => {
+    handleNext()
+  }, 5000)
   return (
     <section className='w-full h-full'>
       <div className='flex min-h-full max-h-[100vh] overflow-hidden'>
@@ -56,9 +59,9 @@ const HeroBanner = ({ bannerMovies }) => {
 
               <div className='absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent '></div>
 
-              <div className='container w-full mx-auto absolute bottom-8 left-0 max-w-md px-3 text-white pb-2'>
+              <div className='container w-full mx-auto absolute bottom-8 max-w-md px-3 text-white pb-2'>
                 <h2 className='font-bold text-2xl text-center'>{item?.name}</h2>
-                <p className='text-ellipsis line-clamp-3 text-slate-100  my-2'>
+                <p className='text-ellipsis line-clamp-3 text-slate-200  my-2'>
                   {item?.description}
                 </p>
 

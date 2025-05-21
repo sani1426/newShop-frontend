@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 
 const HeroBanner = ({bannerMovies}) => {
@@ -12,12 +13,22 @@ const HeroBanner = ({bannerMovies}) => {
               bannerMovies.map((item , index) => {
 
                 return(
-                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative">
+                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative ">
                     <div className="w-full h-full ">
                       <img src={item?.backdrop} className='h-full object-cover w-full'  alt={item?.name} />
                     </div>
 
-                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-800 to-transparent pb-2"></div>
+                    {/*  next and prev button */}
+                    <div className="absolute top-0 w-full h-full flex-between px-4 ">
+                      <button className='bg-white  p-1 rounded-full text-2xl z-10 text-black '>
+                        <FaAngleRight />
+                      </button>
+                      <button className='bg-white  p-1 rounded-full text-2xl z-10'>
+                        <FaAngleLeft />
+                      </button >
+                    </div> 
+
+                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent pb-2"></div>
 
                     <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white">
                       <h2 className='font-bold text-2xl'>{item?.name}</h2>

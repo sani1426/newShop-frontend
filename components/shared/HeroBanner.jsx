@@ -7,7 +7,7 @@ import React from 'react'
 const HeroBanner = ({bannerMovies}) => {
   return (
     <section className='w-full h-full'>
-        <div className="flex min-h-full max-h-[95vh]">
+        <div className="flex min-h-full max-h-[95vh] overflow-hidden">
             {
               bannerMovies.map((item , index) => {
 
@@ -28,7 +28,7 @@ const HeroBanner = ({bannerMovies}) => {
                         <span>|</span>
                         <p>زمان : {item?.duration}دقیقه</p>
                       </div>
-                      <button className='bg-white px-4 py-2 text-black font-bold rounded mt-4'>
+                      <button className=' px-4 py-2 text-black font-bold rounded mt-4 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
                         مشاهده
                       </button>
                     </div>

@@ -32,6 +32,7 @@ const HeroBanner = ({ bannerMovies }) => {
                   src={item?.backdrop}
                   className='h-full object-cover w-full'
                   alt={item?.name}
+                  priority
                 />
               </div>
 

@@ -28,7 +28,7 @@ const [activeImage , setActiveImage] = useState(0)
               bannerMovies.map((item , index) => {
 
                 return(
-                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative transition-all duration-200"  style={{transform : `translateX(${activeImage * 100}%)`}}>
+                  <div key={index} className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative transition-all duration-200"  style={{transform : `translateX(${activeImage * 100}%)`}}>
                     <div className="w-full h-full ">
                       <img src={item?.backdrop} className='h-full object-cover w-full'  alt={item?.name} />
                     </div>

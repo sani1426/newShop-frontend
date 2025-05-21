@@ -34,7 +34,7 @@ const Topbar = () => {
                   href={item?.href}
                 >
                   {item?.icon}
-                  <span className='text-lg'>{item?.label}</span>
+                  <span className='text-lg text-nowrap'>{item?.label}</span>
                 </Link>
               </li>
             ))}

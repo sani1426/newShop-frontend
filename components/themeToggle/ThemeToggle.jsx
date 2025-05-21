@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useAppContext()
-  console.log(theme)
+  
   return (
     <div
       onClick={toggleTheme}

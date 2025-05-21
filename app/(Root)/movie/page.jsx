@@ -7,7 +7,7 @@ const page = async () => {
 
 let Movies ;
 
-const {data} = await axios.get(`${SummaryApi.getMoviesByCategory}/movie`)
+const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/movie`)
 
 if(data.success){
   Movies = await data?.data

@@ -29,7 +29,7 @@ const HeroBanner = ({ bannerMovies }) => {
           return (
             <div
               key={index}
-              className='min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative transition-all duration-150'
+              className='min-w-full min-h-[550px] lg:min-h-full overflow-hidden relative transition-all duration-150'
               style={{ transform: `translateX(${activeImage * 100}%)` }}
             >
               <div className='w-full h-full '>
@@ -60,7 +60,7 @@ const HeroBanner = ({ bannerMovies }) => {
 
               <div className='absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent '></div>
 
-              <div className='container w-full mx-auto absolute bottom-8 max-w-md px-3 text-white pb-2 text-center'>
+              <div className='container w-full mx-auto absolute bottom-0 lg:bottom-10 max-w-md px-3 text-white pb-2 text-center'>
                 <h2 className='font-bold text-2xl text-center'>{item?.name}</h2>
                 <p className='text-ellipsis line-clamp-3 text-slate-200  my-2'>
                   {item?.description}

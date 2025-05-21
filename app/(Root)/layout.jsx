@@ -1,12 +1,12 @@
-import MenuBar from '@/components/shared/MenuBar'
+import MobileNav from '@/components/shared/MobileNav'
 import Topbar from '@/components/shared/Topbar'
 
 export default function Layout({ children }) {
   return (
     <>
       <Topbar />
-      <MenuBar />
       <main>{children}</main>
+      <MobileNav />
     </>
   )
 }

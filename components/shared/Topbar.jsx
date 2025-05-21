@@ -5,12 +5,11 @@ import { FaUserCircle } from 'react-icons/fa'
 import Link from 'next/link'
 import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
-import MenuBar from './MenuBar.jsx'
+import MenuBar from './MobileNav.jsx'
 import { navItem } from '@/data/constance.js'
 
 import SearchToggle from '../themeToggle/searchToggle.jsx'
 import { usePathname } from 'next/navigation.js'
-
 
 const Topbar = () => {
   const pathname = usePathname()
@@ -29,11 +28,13 @@ const Topbar = () => {
             {navItem.map((item) => (
               <li key={item?.id}>
                 <Link
-                  className={`${pathname === item?.href ? "text-grown-100" : ""} hover:text-grown-50 transition-all duration-300 flex-center gap-1 text-xl`}
+                  className={`${
+                    pathname === item?.href ? 'text-grown-100' : ''
+                  } hover:text-grown-50 transition-all duration-300 flex-center gap-1 text-xl`}
                   href={item?.href}
                 >
-                 {item?.icon}
-                 <span className='text-lg'>{item?.label}</span>
+                  {item?.icon}
+                  <span className='text-lg'>{item?.label}</span>
                 </Link>
               </li>
             ))}
@@ -64,9 +65,8 @@ const Topbar = () => {
             </>
           )}
 
-            <SearchToggle />
+          <SearchToggle />
           <ThemeToggle />
-         
         </div>
       </div>
     </header>

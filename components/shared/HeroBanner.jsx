@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
@@ -71,9 +72,9 @@ const HeroBanner = ({ bannerMovies }) => {
                   <span>|</span>
                   <p>زمان : {item?.duration}دقیقه</p>
                 </div>
-                <button className=' px-4 py-2 text-black font-bold rounded mt-4 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
+                <Link href={`/movie/${item?.id}`} className=' px-4 py-2 text-black font-bold rounded mt-4 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
                   مشاهده
-                </button>
+                </Link>
               </div>
             </div>
           )

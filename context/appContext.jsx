@@ -24,7 +24,7 @@ export const AppContextProvider = ({ children }) => {
 
   useEffect(() => {
     getUserDetails()
-  }, [user])
+  }, [])
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')

@@ -45,7 +45,7 @@ const [activeImage , setActiveImage] = useState(0)
 
                     <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent "></div>
 
-                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white pb-">
+                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white pb-2">
                       <h2 className='font-bold text-2xl text-center'>{item?.name}</h2>
                       <p className="text-ellipsis line-clamp-3 text-slate-100  my-2">{item?.description}</p>
 

@@ -23,7 +23,7 @@ const [activeImage , setActiveImage] = useState(0)
 
   return (
     <section className='w-full h-full'>
-        <div className="flex min-h-full max-h-[95vh] overflow-hidden">
+        <div className="flex min-h-full max-h-[100vh] overflow-hidden">
             {
               bannerMovies.map((item , index) => {
 

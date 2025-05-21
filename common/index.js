@@ -16,6 +16,10 @@ const SummaryApi = {
     getMoviesByGenre : {
         url :`${backendDomain}/api/movies/genres`,
         method : 'get'
+    },
+    getHeroMovies : {
+        url :`${backendDomain}/api/movies/hero-movies`,
+        method : 'get'
     }
   
 }

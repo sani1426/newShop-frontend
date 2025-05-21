@@ -9,12 +9,15 @@ import MenuBar from './MenuBar.jsx'
 import { navItem } from '@/data/constance.js'
 
 import SearchToggle from '../themeToggle/searchToggle.jsx'
+import { usePathname } from 'next/navigation.js'
+
 
 const Topbar = () => {
+  const pathname = usePathname()
   const { user, setUser } = useAppContext()
 
   return (
-    <header className='h-20  bg_soft blur-sm  shadow-md fixed w-full z-50'>
+    <header className='h-20  bg_soft opacity-80 shadow-md fixed w-full z-50'>
       <div className='container my-auto mx-auto flex-between h-full gap-8   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />
@@ -26,10 +29,11 @@ const Topbar = () => {
             {navItem.map((item) => (
               <li key={item?.id}>
                 <Link
-                  className='hover:text-grown-50 transition-all duration-300'
+                  className={`${pathname === item?.href ? "text-grown-100" : ""} hover:text-grown-50 transition-all duration-300 flex-center gap-1 text-xl`}
                   href={item?.href}
                 >
-                  {item?.label}
+                 {item?.icon}
+                 <span className='text-lg'>{item?.label}</span>
                 </Link>
               </li>
             ))}
@@ -62,7 +66,7 @@ const Topbar = () => {
 
             <SearchToggle />
           <ThemeToggle />
-          <MenuBar />
+         
         </div>
       </div>
     </header>

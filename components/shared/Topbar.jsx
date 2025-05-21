@@ -17,7 +17,7 @@ const Topbar = () => {
 
   return (
     <header className='h-20  bg_soft opacity-80 shadow-md fixed w-full z-50'>
-      <div className='container my-auto mx-auto flex-between h-full gap-8   px-4'>
+      <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />
           <span className='text-2xl text-grown-50 text-nowrap'>سامی فیلم</span>

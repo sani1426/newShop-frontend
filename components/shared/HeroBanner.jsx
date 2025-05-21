@@ -28,7 +28,7 @@ const [activeImage , setActiveImage] = useState(0)
               bannerMovies.map((item , index) => {
 
                 return(
-                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative "  style={{transform : `translateX(-${activeImage * 100}%)`}}>
+                  <div className="min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative transition-all duration-200"  style={{transform : `translateX(${activeImage * 100}%)`}}>
                     <div className="w-full h-full ">
                       <img src={item?.backdrop} className='h-full object-cover w-full'  alt={item?.name} />
                     </div>
@@ -43,10 +43,10 @@ const [activeImage , setActiveImage] = useState(0)
                       </button >
                     </div> 
 
-                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent pb-2"></div>
+                    <div className="absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent "></div>
 
-                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white">
-                      <h2 className='font-bold text-2xl'>{item?.name}</h2>
+                    <div className="container w-full mx-auto absolute bottom-0 max-w-md px-3 text-white pb-">
+                      <h2 className='font-bold text-2xl text-center'>{item?.name}</h2>
                       <p className="text-ellipsis line-clamp-3 text-slate-100  my-2">{item?.description}</p>
 
                       <div className="flex-center gap-2">

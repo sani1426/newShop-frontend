@@ -1,14 +1,12 @@
-
-import Topbar from "@/components/shared/Topbar";
-
-
+import MenuBar from '@/components/shared/MenuBar'
+import Topbar from '@/components/shared/Topbar'
 
 export default function Layout({ children }) {
-  return(
+  return (
     <>
-    <Topbar />
-
-     <main >{children}</main>
-     </>
-     )
+      <Topbar />
+      <MenuBar />
+      <main>{children}</main>
+    </>
+  )
 }

@@ -23,9 +23,10 @@ const HeroBanner = ({bannerMovies}) => {
                       <h2 className='font-bold text-2xl'>{item?.name}</h2>
                       <p className="text-ellipsis line-clamp-3  my-2">{item?.description}</p>
 
-                      <div className="">
+                      <div className="flex-center gap-2">
                         <p>امتیاز : {item?.rating}+</p>
-                        {/* <p>view</p> */}
+                        <span>|</span>
+                        <p>زمان : {item?.duration}دقیقه</p>
                       </div>
                       <button className='bg-white px-4 py-2 text-black font-bold rounded mt-4'>
                         Play Now

@@ -88,7 +88,7 @@ const page = () => {
                 placeholder='ایمیل خود را وارد کنید ...'
               />
             </div>
-            <div className='flex-between'>
+            <div className='flex-between gap-2'>
               <div className='grid gap-1'>
                 <label className='label'>رمز عبور</label>
                 <input

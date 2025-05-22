@@ -47,13 +47,13 @@ const HeroBanner = ({ bannerMovies }) => {
               <div className='absolute top-0 w-full h-full flex-between px-4 '>
                 <button
                   onClick={handleNext}
-                  className=' p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50  hover:bg-slate-300 transition-all duration-300'
+                  className=' p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50 rounded-full  hover:bg-slate-300 transition-all duration-700'
                 >
                   <FaAngleRight />
                 </button>
                 <button
                   onClick={handlePrev}
-                  className='p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50  hover:bg-slate-300 transition-all duration-300'
+                  className='p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50 rounded-full  hover:bg-slate-700 transition-all duration-300'
                 >
                   <FaAngleLeft />
                 </button>
@@ -61,7 +61,7 @@ const HeroBanner = ({ bannerMovies }) => {
 
               <div className='absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent '></div>
 
-              <div className='container w-full mx-auto absolute bottom-0 lg:bottom-12 left-2 max-w-md lg:max-w-xl px-3 text-white pb-4 flex flex-col gap-4 '>
+              <div className='container w-full mx-auto absolute bottom-0 lg:bottom-12 left-2 max-w-md lg:max-w-xl px-3 text-white pb-4 flex flex-col gap-1 lg:gap-4 '>
                 <h1 className='font-bold text-2xl lg:text-4xl text-center'>{item?.name}</h1>
                 <p className='text-ellipsis line-clamp-2 lg:line-clamp-4 text-slate-200  my-2'>
                   {item?.description}

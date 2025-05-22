@@ -15,8 +15,8 @@ const MobileNav = () => {
             <Link
               key={item?.id}
               href={item?.href}
-              className={`px-3 flex h-full items-center flex-col justify-center hover:text-grown-50 transition-all duration-300 ${
-                pathname === item?.href && 'text-grown-100 '
+              className={` flex h-full items-center flex-col justify-center hover:text-grown-50 transition-all duration-300 bg_soft p-4 rounded-full ${
+                pathname === item?.href && 'text-grown-100 transform -translate-y-4 '
               }`}
             >
               <div className='text-2xl'>{item?.icon}</div>

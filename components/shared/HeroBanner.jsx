@@ -61,17 +61,19 @@ const HeroBanner = ({ bannerMovies }) => {
 
               <div className='absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent '></div>
 
-              <div className='container w-full mx-auto absolute bottom-0 max-w-md lg:max-w-lg px-3 text-white pb-4 text-center'>
-                <h1 className='font-bold text-2xl lg:text-3xl text-center'>{item?.name}</h1>
+              <div className='container w-full mx-auto absolute bottom-16 max-w-md lg:max-w-xl px-3 text-white pb-4 flex flex-col gap-4 '>
+                <h1 className='font-bold text-2xl lg:text-4xl text-center'>{item?.name}</h1>
                 <p className='text-ellipsis line-clamp-2 lg:line-clamp-4 text-slate-200  my-2'>
                   {item?.description}
                 </p>
 
-                <div className='flex-center gap-2'>
+                <div className='flex-center gap-2 mb-3'>
                   <p>امتیاز : {item?.rating}+</p>
                   <span>|</span>
                   <p>زمان : {item?.duration}دقیقه</p>
                 </div>
+
+
                 <Link href={`/movie/${item?._id}`} className=' px-4 py-2 text-black font-bold rounded mt-8 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
                   مشاهده
                 </Link>

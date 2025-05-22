@@ -30,7 +30,7 @@ const HeroBanner = ({ bannerMovies }) => {
           return (
             <div
               key={index}
-              className='min-w-full min-h-[550px] lg:min-h-full overflow-hidden relative transition-all duration-150'
+              className='min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative transition-all duration-150'
               style={{ transform: `translateX(${activeImage * 100}%)` }}
             >
               <div className='w-full h-full '>
@@ -47,7 +47,7 @@ const HeroBanner = ({ bannerMovies }) => {
               <div className='absolute top-0 w-full h-full flex-between px-4 '>
                 <button
                   onClick={handleNext}
-                  className='bg-white  p-1 rounded-full text-2xl z-10 text-black '
+                  className=' p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50 '
                 >
                   <FaAngleRight />
                 </button>

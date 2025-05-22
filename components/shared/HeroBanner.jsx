@@ -47,7 +47,7 @@ const HeroBanner = ({ bannerMovies }) => {
               <div className='absolute top-0 w-full h-full flex-between px-4 '>
                 <button
                   onClick={handleNext}
-                  className=' p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50 rounded-full  hover:bg-slate-300 transition-all duration-700'
+                  className=' p-1 bg-transparent text-2xl z-10 text-slate-300 hover:text-slate-50 rounded-full  hover:bg-slate-700 transition-all duration-300'
                 >
                   <FaAngleRight />
                 </button>

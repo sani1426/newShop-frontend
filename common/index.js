@@ -24,7 +24,15 @@ const SummaryApi = {
     getMoviesByCategory : {
         url :`${backendDomain}/api/movies/category`,
         method : 'get'
-    }
+    },
+    getMovieDetails : {
+        url :`${backendDomain}/api/movies/details`,
+        method : 'get'
+    },
+    getSimilarMovies : {
+        url :`${backendDomain}/api/movies/similar-movies`,
+        method : 'post',
+    },
   
 }
 

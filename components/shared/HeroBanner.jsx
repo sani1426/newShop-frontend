@@ -72,7 +72,7 @@ const HeroBanner = ({ bannerMovies }) => {
                   <span>|</span>
                   <p>زمان : {item?.duration}دقیقه</p>
                 </div>
-                <Link href={`/movie/${item?.id}`} className=' px-4 py-2 text-black font-bold rounded mt-4 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
+                <Link href={`/movie/${item?._id}`} className=' px-4 py-2 text-black font-bold rounded mt-8 bg-gradient-to-r from-grown-50 to-grown-100 shadow-md  transition-all hover:bg-opacity-75'>
                   مشاهده
                 </Link>
               </div>

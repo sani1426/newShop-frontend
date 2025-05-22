@@ -7,7 +7,7 @@ const page = async () => {
 
 let Movies ;
 
-const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/${"movie"}`)
+const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/movie`)
 
 if(data.success){
   Movies = await data?.data
@@ -15,11 +15,11 @@ if(data.success){
 
 
   return (
-    <div className='mt-20'>
+    <div className='pt-20'>
       {
-        Movies.map(item => {
+        Movies.map(item => (
           <h1 key={item?._id}>{item?.name}</h1>
-        })
+        ))
       }
     </div>
   )

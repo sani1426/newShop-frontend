@@ -1,29 +1,23 @@
-"use client"
-
 import SummaryApi from '@/common'
 import HeroBanner from '@/components/shared/HeroBanner'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import axios from 'axios';
 
 
 
-export default  function Home() {
- const [movies , setMovies] =useState()
+export default async function Home() {
+  let Movies;
 
- const getMovie = async ()=>{
+  const response = await axios.get(SummaryApi.getHeroMovies.url)
 
-   const {data} = await axios.get(SummaryApi.getHeroMovies.url)
-   console.log(data);
-   if (data.success) {
-     setMovies(data?.data)
-     
-   }
- }
+  const result = await response.json()
+  
+  if (result.success) {
+    Movies = await result?.data
+  }
 
- useEffect(()=>{getMovie()},[])
   return (
     <>
-      <HeroBanner bannerMovies={movies} />
+      <HeroBanner bannerMovies={Movies} />
     </>
   )
 }

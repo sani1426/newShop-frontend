@@ -78,7 +78,9 @@ body {
 }
 .primary{
   background-color: var(--primary);
-
+}
+.border_soft{
+  border-color: var(--border-clr);
 }
 @layer base {
   :root {

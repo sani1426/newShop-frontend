@@ -61,9 +61,9 @@ const HeroBanner = ({ bannerMovies }) => {
 
               <div className='absolute top-0  w-full h-full bg-gradient-to-t from-slate-900 to-transparent '></div>
 
-              <div className='container w-full mx-auto absolute bottom-0 lg:bottom-10 max-w-md px-3 text-white pb-2 text-center'>
-                <h2 className='font-bold text-2xl text-center'>{item?.name}</h2>
-                <p className='text-ellipsis line-clamp-3 text-slate-200  my-2'>
+              <div className='container w-full mx-auto absolute bottom-0 max-w-md lg:max-w-lg px-3 text-white pb-4 text-center'>
+                <h1 className='font-bold text-2xl lg:text-3xl text-center'>{item?.name}</h1>
+                <p className='text-ellipsis line-clamp-2 lg:line-clamp-4 text-slate-200  my-2'>
                   {item?.description}
                 </p>
 

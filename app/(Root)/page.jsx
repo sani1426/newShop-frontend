@@ -1,5 +1,6 @@
 import SummaryApi from '@/common'
 import HeroBanner from '@/components/shared/HeroBanner'
+import GenresSlider from '@/section/GenreSlider';
 import axios from 'axios';
 
 
@@ -18,6 +19,7 @@ export default async function Home() {
   return (
     <>
       <HeroBanner bannerMovies={Movies} />
+      <GenresSlider genre="اکشن"  header="بهترین های اکشن" />
     </>
   )
 }

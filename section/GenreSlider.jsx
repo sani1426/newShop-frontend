@@ -1,13 +1,13 @@
 import SummaryApi from '@/common'
 import Card from '@/components/shared/Card'
 import axios from 'axios'
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-import 'swiper/css';
+// import 'swiper/css';
 
 
-import { Autoplay } from 'swiper/modules';
+// import { Autoplay } from 'swiper/modules';
 
 
 

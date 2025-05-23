@@ -164,8 +164,3 @@ body {
 
 
 
-.genre-slider{
-  display: grid;
-  grid-template-columns: repeat(auto-fit , 230px);
-  gap: 1rem;
-}

@@ -1,13 +1,14 @@
 import SummaryApi from '@/common'
 import Card from '@/components/shared/Card'
 import axios from 'axios'
-import { Navigation } from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+
 import 'swiper/css';
-import 'swiper/css/navigation';
+
+
+import { Autoplay } from 'swiper/modules';
+
 
 
 
@@ -24,22 +25,37 @@ const GenresSlider = async ({ genre, header }) => {
 
   return (
     <div className='container  mx-auto'>
-      <h1 className='text-2xl font-bold lg:text-3xl mb-5'>{header}</h1>
+      <h1 className='text-2xl font-bold lg:text-3xl '>{header}</h1>
+      <section className='mt-8'>
       <Swiper
-      modules={[Navigation]}
-      spaceBetween={20}
-      slidesPerView={5}
-      navigation
 
-    >
-      {
-        Movies.map(item => (
-          <SwiperSlide key={item?._id}>
-            <Card data={item} />
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        }}
+        modules={[Autoplay]}
+
+  
+        centeredSlides={true}
+        autoplay={{ delay: 3000 }}
+        loop
+      >
+        {Movies.map((movie) => (
+          <SwiperSlide key={movie._id}>
+            <div>
+              <Card data={movie} />
+            </div>
           </SwiperSlide>
-        ))
-      }
-    </Swiper>
+        ))}
+      </Swiper>
+    </section>
     </div>
   )
 }

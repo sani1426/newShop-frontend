@@ -33,6 +33,10 @@ const SummaryApi = {
         url :`${backendDomain}/api/movies/similar-movies`,
         method : 'post',
     },
+    getMoviesByYear : {
+        url :`${backendDomain}/api/movies/date`,
+        method : 'get',
+    },
   
 }
 

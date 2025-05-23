@@ -19,7 +19,10 @@ export default async function Home() {
   return (
     <>
       <HeroBanner bannerMovies={Movies} />
+      <section className='w-full bg_main py-8 px-4'>
       <GenresSlider genre="اکشن"  header="بهترین های اکشن" />
+      </section>
+     
     </>
   )
 }

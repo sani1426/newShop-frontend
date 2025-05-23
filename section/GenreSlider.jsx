@@ -1,6 +1,7 @@
 import SummaryApi from '@/common'
 // import Card from '@/components/shared/Card'
 import axios from 'axios'
+import Image from "next/image"
 
 const GenresSlider = async ({ genre, header }) => {
   let Movies = []

@@ -27,7 +27,7 @@ const GenresSlider = async ({ genre, header }) => {
     <div className='container  mx-auto'>
       <h1 className='text-2xl font-bold lg:text-3xl '>{header}</h1>
       <section className='mt-8'>
-      <Swiper
+      {/* <Swiper
 
         breakpoints={{
           640: {
@@ -54,7 +54,7 @@ const GenresSlider = async ({ genre, header }) => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </section>
     </div>
   )

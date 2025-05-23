@@ -16,7 +16,7 @@ const GenresSlider = async ({ genre, header }) => {
   return (
     <div className='container  mx-auto'>
       <h1 className='text-xl font-bold lg:text-2xl mb-3'>{header}</h1>
-      <div className='w-full grid  grid-cols-[repeat(auto-fit , 230px)] gap-6'>
+      <div className='w-full grid  grid-cols-[repeat(auto-fit,230px)] gap-6'>
         {Movies.map((item, index) => {
           return <Card key={index} data={item} />
         })}

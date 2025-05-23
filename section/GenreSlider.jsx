@@ -1,13 +1,8 @@
 import SummaryApi from '@/common'
-import Card from '@/components/shared/Card'
+import Carousel from '@/components/shared/carousel'
+
 import axios from 'axios'
-// import { Swiper, SwiperSlide } from 'swiper/react';
 
-
-// import 'swiper/css';
-
-
-// import { Autoplay } from 'swiper/modules';
 
 
 
@@ -27,34 +22,7 @@ const GenresSlider = async ({ genre, header }) => {
     <div className='container  mx-auto'>
       <h1 className='text-2xl font-bold lg:text-3xl '>{header}</h1>
       <section className='mt-8'>
-      {/* <Swiper
-
-        breakpoints={{
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 5,
-          },
-
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
-        }}
-        modules={[Autoplay]}
-
-  
-        centeredSlides={true}
-        autoplay={{ delay: 3000 }}
-        loop
-      >
-        {Movies.map((movie) => (
-          <SwiperSlide key={movie._id}>
-            <div>
-              <Card data={movie} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
+    <Carousel data={Movies} />
     </section>
     </div>
   )

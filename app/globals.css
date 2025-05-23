@@ -166,5 +166,5 @@ body {
 
 
 .Card_movie_Info {
-  @apply flex flex-col justify-end p-5 absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(15,23,42,0.35)] to-[rgba(15,23,42,0.62)] hover:from-[rgba(15,23,42,0.65)] hover:to-[rgba(15,23,42,0.72)] transition-all duration-500
+  @apply flex flex-col justify-end p-5 rounded-md absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(15,23,42,0.35)] to-[rgba(15,23,42,0.62)] hover:from-[rgba(15,23,42,0.65)] hover:to-[rgba(15,23,42,0.72)] transition-all duration-500
 }

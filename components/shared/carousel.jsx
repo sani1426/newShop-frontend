@@ -24,7 +24,7 @@ const Carousel = ({data}) => {
 
   
         centeredSlides={true}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4000 }}
         loop
       >
         {data.map((movie) => (

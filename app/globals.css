@@ -23,8 +23,8 @@ body {
 }
 
 :root {
-  --bg: #f8fafc;
-  --bg-soft: #f1f5f9c5;
+  --bg: #ffffff;
+  --bg-soft: #cacacac5;
   --text-clr: #020617;
   --text-clr-soft: #1e293b;
   --border-clr:#1e293bc7;

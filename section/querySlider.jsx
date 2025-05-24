@@ -8,11 +8,11 @@ import Link from 'next/link'
 
 
 
-const GenresSlider = async ({ genre, header }) => {
+const QuerySlider = async ({ value, header,queyr }) => {
   let Movies = []
 
   const { data } = await axios.get(
-    `${SummaryApi.getMoviesByGenre.url}?genre=${genre}`
+    `${SummaryApi.getMoviesByFillter.url}?${query}=${value}`
   )
 
   if (data.success) {
@@ -35,5 +35,5 @@ const GenresSlider = async ({ genre, header }) => {
   )
 }
 
-export default GenresSlider
+export default QuerySlider
 

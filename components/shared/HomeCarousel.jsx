@@ -71,7 +71,7 @@ resetTimeAnimation();
 
 
   return (
-    <div className='carousel'>
+    <div dir="ltr" className='carousel'>
       <div className='list'>
         {Movies.map((item) => (
           <div

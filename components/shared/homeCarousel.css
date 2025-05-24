@@ -20,6 +20,9 @@
     background-size: cover;
     z-index: 100;
     transition: 1s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   /* Main items */
@@ -71,21 +74,21 @@
   }
   
   .content .title {
-    font-size: 100px;
+    font-size: 30px;
     color: #14ff72cb;
     font-weight: bold;
     animation-delay: 0.3s;
   }
   
   .content .name {
-    font-size: 100px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 3px 4px 4px rgba(255,255,255,0.8);
     animation-delay: 0.6s;
   }
   
   .content .des {
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px 0 20px 5px;
     animation-delay: 0.9s;
   }
@@ -95,13 +98,7 @@
     animation-delay: 1.2s;
   }
   
-  .content .btn button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #fff;
-    background: none;
-    cursor: pointer;
-  }
+
   
   .content .btn button:nth-child(1) {
     margin-right: 15px;

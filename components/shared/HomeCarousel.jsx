@@ -76,19 +76,18 @@ resetTimeAnimation();
         {Movies.map((item) => (
           <div
             className='item'
-            style={{background : `url(${item?.backdrop})`}}
+            style={{background : `url(${item?.backdrop})` }}
           >
             <div className='content'>
-              <div className='title'>SLIDER</div>
-              <div className='name'>One</div>
+              <div className='title text-ellipsis line-clamp-1 text-nowrap'>{item?.name}</div>
+              <div className='name'>{item?.year}</div>
               <div className='des'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Officiis culpa similique consequuntur, reprehenderit dicta
-                repudiandae.
+              {
+                item?.description
+              }
               </div>
               <div className='btn'>
-                <button>See More</button>
-                <button>Subscribe</button>
+                <button className="px-4 py-3 rounded-md primary text-white ">مشاهده</button>
               </div>
             </div>
           </div>

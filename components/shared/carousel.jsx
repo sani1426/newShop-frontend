@@ -5,18 +5,18 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import Card from '@/components/shared/Card'
 
-const Carousel = ({data}) => {
+const Carousel = ({data, sm , lg}) => {
   return (
   <Swiper
 
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: {sm},
             spaceBetween: 5,
           },
 
           1024: {
-            slidesPerView: 5,
+            slidesPerView: {lg},
             spaceBetween: 20,
           },
         }}

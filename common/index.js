@@ -37,6 +37,10 @@ const SummaryApi = {
         url :`${backendDomain}/api/movies/date`,
         method : 'get',
     },
+    getMoviesByFillter : {
+        url :`${backendDomain}/api/movies/fillter`,
+        method : 'get',
+    },
   
 }
 

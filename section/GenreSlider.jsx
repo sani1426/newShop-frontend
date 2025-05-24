@@ -29,7 +29,7 @@ const GenresSlider = async ({ genre, header }) => {
       </div>
       
       <section className='mt-8'>
-    <Carousel data={Movies} />
+    <Carousel data={Movies} sm="3" lg="5" />
     </section>
     </div>
   )

@@ -1,26 +1,14 @@
-
-
-// import SummaryApi from '@/common';
-// import axios from 'axios';
-
+import HomeCarousel from "@/components/shared/HomeCarousel"
+import Movies from '@/data/movies'
 
 const page = async () => {
 
-//   let Tv ;
 
-// const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
 
-// if(data.success){
-//   Tv = await data?.data
-// }
 
   return (
     <div>
-       {/* {
-        Tv.map(item => {
-          <h1 key={item?.id}>{item?.name}</h1>
-        })
-      } */}
+    <HomeCarousel Movies={Movies} />
     </div>
   )
 }

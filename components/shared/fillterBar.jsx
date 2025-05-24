@@ -4,7 +4,7 @@
 const FillterBar = () => {
   return (
    <section className='w-full bg_soft py-8 px-12'>
-    <div className="mx auto bg_main rounded-md">
+    <div className="mx auto bg_main rounded-md ">
         <form className='flex-center gap-10 py-3' >
             
             <select   className='px-4 py-3 border-2 focus:border-grown-100 rounded-md bg_soft'>

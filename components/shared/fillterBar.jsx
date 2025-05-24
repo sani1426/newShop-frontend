@@ -13,7 +13,7 @@ const FillterBar = () => {
                 <option value="movie">فیلم</option>
                 <option value="tv">سریال</option>
             </select>
-            <select   className='px-4 py-3 border-2 focus:border-grown-100 rounded-md  >
+            <select   className='px-4 py-3 border-2 focus:border-grown-100 rounded-md'  >
                 <option >انتخاب ژانر</option>
                 <option value="اکشن">اکشن</option>
                 <option value="عاشقانه">عاشقانه</option>
@@ -25,7 +25,7 @@ const FillterBar = () => {
                 <option value="ترسناک">ترسناک</option>
                 <option value="کمدی">کمدی</option>
             </select>
-            <select   className='px-4 py-3 border-2 focus:border-grown-100 rounded-md >
+            <select   className='px-4 py-3 border-2 focus:border-grown-100 rounded-md ' >
                 <option >مرتب سازی</option>
                 <option value="محبوب ترین">محبوب ترین ها</option>
                 <option value="بالاترین امتیاز">بالاترین امتیاز</option>

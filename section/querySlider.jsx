@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 
 
-const QuerySlider = async ({ value, header,queyr }) => {
+const QuerySlider = async ({ value, header,query }) => {
   let Movies = []
 
   const { data } = await axios.get(

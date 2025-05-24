@@ -98,24 +98,6 @@
     animation-delay: 1.2s;
   }
   
-
-  
-  .content .btn button:nth-child(1) {
-    margin-right: 15px;
-    color: #fff;
-  
-  }
-  
-  .content .btn button:nth-child(2) {
-    color: #14ff72cb;
-    transition: 0.3s;
-  }
-  
-  .content .btn button:nth-child(2):hover {
-    background: #14ff72cb;
-    color: #fff;
-    border-color: #14ff72cb;
-  }
   
   /* Animation keyframe */
   @keyframes animate {
@@ -134,7 +116,7 @@
   /* --- Arrows --- */
   .arrows {
     position: absolute;
-    top: 80%;
+    top: 90%;
     right: 52%;
     display: flex;
     gap: 10px;

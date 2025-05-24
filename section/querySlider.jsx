@@ -29,7 +29,7 @@ const QuerySlider = async ({ value, header,query }) => {
       </div>
       
       <section className='mt-8'>
-    <Carousel data={Movies} sm="3" lg="5" />
+    <Carousel data={Movies}  />
     </section>
     </div>
   )

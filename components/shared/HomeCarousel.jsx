@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import './homeCarousel.css'
+import Image from "next/image"
 
 const HomeCarousel = ({ Movies }) => {
 
@@ -76,8 +77,9 @@ resetTimeAnimation();
         {Movies.map((item) => (
           <div
             className='item'
-            style={{background : `url(${item?.backdrop})`, backgroundSize : "cover" , backgroundPosition : "center" }}
+            // style={{background : `url(${item?.backdrop})`, backgroundSize : "cover" , backgroundPosition : "center" }}
           >
+            <Image priority  src={item?.backdrop} alt="" width={1000} height={1000} fill className="w-full h-full object-cover" />
             <div className='content'>
               <div className='title text-ellipsis line-clamp-1 text-nowrap'>{item?.name}</div>
               <div className='name'>{item?.year}</div>

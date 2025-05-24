@@ -14,8 +14,8 @@ const HomeCarousel = ({ Movies }) => {
         const items = document.querySelectorAll('.item');
         const runningTime = document.querySelector('.carousel .timeRunning');
     
-        const timeRunning = 3000;
-const timeAutoNext = 5000;
+        const timeRunning = 4000;
+const timeAutoNext = 6000;
 
 let runTimeout;
 let autoNext = setTimeout(() => {

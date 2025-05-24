@@ -76,7 +76,7 @@ resetTimeAnimation();
         {Movies.map((item) => (
           <div
             className='item'
-            style={{background : `url(${item?.backdrop})` }}
+            style={{background : `url(${item?.backdrop})`, backgroundSize : "cover" , backgroundPosition : "center" }}
           >
             <div className='content'>
               <div className='title text-ellipsis line-clamp-1 text-nowrap'>{item?.name}</div>

@@ -83,7 +83,7 @@ const page = async ({ params }) => {
                 </span> */}
               </div>
               <div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
-                <p>{details?.description}</p>
+                <p className='text-slate-50'>{details?.description}</p>
               </div>
             </div>
 

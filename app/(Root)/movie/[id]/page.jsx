@@ -46,19 +46,20 @@ const page = async ({ params }) => {
 
 <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
   <div className=' flex '>
-<div>
-<button> <span>({details?.likes})</span>دوست داشتم</button>
-<button>دوست نداشتم <span>({details?.deslikes})</span></button>
-</div>
+
     <button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
       <span className='px-2 py-2 border-2 border-red-800 rounded-full'>
         <GiShare />
       </span>
       اشتراک گذاری
     </button>
+    <div className='flex-center gap-5'>
+<button className='px-4 py-2 border-2 border-slate-100 text-grown-100'> <span>({details?.likes})</span>دوست داشتم</button>
+<button className='px-4 py-2 border-slate-100 border-2 text-red-500'>دوست نداشتم <span>({details?.deslikes})</span></button>
+</div>
   </div>
 </div>
-<div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400 '>
+<div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400  bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)]'>
   <div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
     <span className='text-yellow-400 text-4xl '>
       <FaStar />

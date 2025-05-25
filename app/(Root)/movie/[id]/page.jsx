@@ -40,7 +40,7 @@ const page = async ({ params }) => {
               // }}
               alt={details?.name}
             >
-              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover' priority fill />
+              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority fill />
               <h1 className='text-white  text-3xl'>{details?.name}</h1>
 
               <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md '>

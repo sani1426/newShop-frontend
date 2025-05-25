@@ -92,7 +92,9 @@ const page = async ({ params }) => {
           <div className='w-full bg_soft mt-16 flex-center gap-5'>
             {
               similarMovies.map((item)=> (
+                <div key={item?._id} className='w-[350px] h-[450px] '>
                 <Card data={item} />
+              </div>
               ))
             }
           </div>

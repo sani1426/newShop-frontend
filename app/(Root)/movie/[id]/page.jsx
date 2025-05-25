@@ -28,9 +28,9 @@ const page = async ({ params }) => {
     <>
       {details ? (
         <>
-          <header className='h-[100vh] '>
+          <header dir='ltr' className='h-[100vh] '>
             <div
-              className='absolute h-[80%] w-full flex justify-end pb-2 flex-col gap-8 pl-8'
+              className='absolute h-[90%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'
               style={{
                 background: `linear-gradient(to bottom,rgba(0,0,0,.6) , rgba(0,0,0,.8)) ,url('${details?.backdrop}')`,
                 backgroundPosition: 'center',

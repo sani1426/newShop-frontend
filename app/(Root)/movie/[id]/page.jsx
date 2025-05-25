@@ -87,6 +87,14 @@ const page = async ({ params }) => {
               <Card data={details} />
             </div>
           </header>
+
+          <div className='w-full bg_soft mt-16 flex-center gap-5'>
+            {
+              similarMovies.map((item)=> (
+                <Card data={item} />
+              ))
+            }
+          </div>
         </>
       ) : (
         <div className='h-[100vh] w-full'>

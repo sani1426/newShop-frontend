@@ -31,7 +31,7 @@ const page = async ({ params }) => {
         <>
           <header dir='ltr' className='h-[100vh] '>
             <div
-              className='relative h-[90%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'
+              className='relative h-[100%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'
               // style={{
               //   background: `linear-gradient(to bottom,rgba(0,0,0,.6) , rgba(0,0,0,.8)) ,url('${details?.backdrop}')`,
               //   backgroundPosition: 'center',
@@ -41,6 +41,7 @@ const page = async ({ params }) => {
               alt={details?.name}
             >
               <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority fill />
+              <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-20'></div>
         <div className='z-10'>
         <h1 className='text-white  text-3xl '>{details?.name}</h1>
 

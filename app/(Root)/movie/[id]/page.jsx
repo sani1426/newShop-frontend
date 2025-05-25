@@ -68,7 +68,7 @@ const page = async ({ params }) => {
                   <span className='text-yellow-400 text-4xl '>
                     <FaStar />
                   </span>
-                  <div className='flex flex-col text-[.9rem] text-center'>
+                  <div className='flex flex-col text-[.9rem] text-center text-slate-100'>
                     <span>
                       {details?.rating}{' '}
                       <span className='text-slate-400'>/ 10</span>
@@ -83,7 +83,7 @@ const page = async ({ params }) => {
                 </span> */}
               </div>
               <div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
-                <p className='text-slate-50'>{details?.description}</p>
+                <p className='text-slate-100'>{details?.description}</p>
               </div>
             </div>
 

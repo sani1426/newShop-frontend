@@ -89,8 +89,10 @@ const page = async ({ params }) => {
             </div>
           </header>
 
-          <div className='w-full bg_soft pt-16 flex-center gap-5'>
-            <h1 className='text-2xl font-bold mb-3'>سریالهای مشابه</h1>
+        <div className='w-full bg_soft pt-16 px-2'>
+        <h1 className='text-2xl font-bold mb-3'>فیلم های مشابه</h1>
+          <div className=' w-full mx-auto  flex-center gap-5'>
+            
             {
               similarMovies.map((item)=> (
                 <div key={item?._id} className='w-[350px] h-[450px] '>
@@ -99,6 +101,7 @@ const page = async ({ params }) => {
               ))
             }
           </div>
+        </div>
         </>
       ) : (
         <div className='h-[100vh] w-full'>

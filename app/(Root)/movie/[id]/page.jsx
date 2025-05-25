@@ -5,6 +5,7 @@ import { FaStar } from 'react-icons/fa'
 import { RiPokerHeartsFill } from 'react-icons/ri'
 import { FaRegHeart } from 'react-icons/fa'
 import { GiShare } from 'react-icons/gi'
+import Image from 'next/image'
 
 const page = async ({ params }) => {
   let details
@@ -31,14 +32,15 @@ const page = async ({ params }) => {
           <header dir='ltr' className='h-[100vh] '>
             <div
               className='absolute h-[90%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'
-              style={{
-                background: `linear-gradient(to bottom,rgba(0,0,0,.6) , rgba(0,0,0,.8)) ,url('${details?.backdrop}')`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-              }}
+              // style={{
+              //   background: `linear-gradient(to bottom,rgba(0,0,0,.6) , rgba(0,0,0,.8)) ,url('${details?.backdrop}')`,
+              //   backgroundPosition: 'center',
+              //   backgroundSize: 'cover',
+              //   backgroundRepeat: 'no-repeat',
+              // }}
               alt={details?.name}
             >
+              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover' priority fill />
               <h1 className='text-white  text-3xl'>{details?.name}</h1>
 
               <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md '>

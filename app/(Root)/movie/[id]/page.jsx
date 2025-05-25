@@ -41,8 +41,8 @@ const page = async ({ params }) => {
               alt={details?.name}
             >
               <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority fill />
-              <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-20'></div>
-        <div className='z-10'>
+              <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-10'></div>
+        <div className='z-20'>
         <h1 className='text-white  text-3xl '>{details?.name}</h1>
 
 <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
@@ -85,7 +85,7 @@ const page = async ({ params }) => {
         </div>
             </div>
 
-            <div className='w-[300px] h-[400px] absolute left-[70%] top-[13rem]'>
+            <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem]'>
               <Card data={details} />
             </div>
           </header>

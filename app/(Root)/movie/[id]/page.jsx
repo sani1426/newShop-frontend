@@ -45,18 +45,9 @@ const page = async ({ params }) => {
 
               <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md '>
                 <div className=' flex'>
-                  {/* <button
-                  className={`${
-                    isFavorite ? "text-green-600" : " text-red-800"
-                  }  py-2  rounded-md text-xl flexCenter gap-2`}
-                >
-                  <span
-                    className={` px-2 py-2 border-2  rounded-full primary`}
-                  >
-                    {isFavorite ? <RiPokerHeartsFill /> : <FaRegHeart />}{" "}
-                  </span>
-                  {isFavorite ? "remove from favorite" : "Add To favorit"}
-                </button> */}
+           <div>
+            <button></button>
+           </div>
                   <button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
                     <span className='px-2 py-2 border-2 border-red-800 rounded-full'>
                       <GiShare />

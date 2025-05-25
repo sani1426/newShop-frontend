@@ -89,7 +89,8 @@ const page = async ({ params }) => {
             </div>
           </header>
 
-          <div className='w-full bg_soft mt-16 flex-center gap-5'>
+          <div className='w-full bg_soft pt-16 flex-center gap-5'>
+            <h1 className='text-2xl font-bold mb-3'>سریالهای مشابه</h1>
             {
               similarMovies.map((item)=> (
                 <div key={item?._id} className='w-[350px] h-[450px] '>

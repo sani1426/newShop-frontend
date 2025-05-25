@@ -55,7 +55,7 @@ const page = async ({ params }) => {
                   </span>
                   {isFavorite ? "remove from favorite" : "Add To favorit"}
                 </button> */}
-                  <button className='px-6 py-2 text-red-800 rounded-md text-xl flexCenter gap-2'>
+                  <button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
                     <span className='px-2 py-2 border-2 border-red-800 rounded-full'>
                       <GiShare />
                     </span>
@@ -64,7 +64,7 @@ const page = async ({ params }) => {
                 </div>
               </div>
               <div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400 '>
-                <div className='flexCenter gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
+                <div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
                   <span className='text-yellow-400 text-4xl '>
                     <FaStar />
                   </span>
@@ -93,7 +93,7 @@ const page = async ({ params }) => {
           </header>
         </>
       ) : (
-        <div className='v-[100vh] w-full'>
+        <div className='h-[100vh] w-full'>
           <div className='absolute bg-slate-400 animate-pulse h-[90%] w-full flex justify-end pb-2 flex-col gap-8 pl-8'></div>
           <div className='w-[300px] h-[400px] absolute left-[70%] top-[13rem] bg-slate-500 animate-pulse rounded-lg'></div>
         </div>

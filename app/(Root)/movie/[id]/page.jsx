@@ -41,44 +41,46 @@ const page = async ({ params }) => {
               alt={details?.name}
             >
               <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority fill />
-              <h1 className='text-white  text-3xl z-10'>{details?.name}</h1>
+        <div className='z-10'>
+        <h1 className='text-white  text-3xl '>{details?.name}</h1>
 
-              <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md '>
-                <div className=' flex'>
-           <div>
-            <button> <span>({details?.likes})</span>دوست داشتم</button>
-            <button>دوست نداشتم <span>({details?.deslikes})</span></button>
-           </div>
-                  <button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
-                    <span className='px-2 py-2 border-2 border-red-800 rounded-full'>
-                      <GiShare />
-                    </span>
-                    اشتراک گذاری
-                  </button>
-                </div>
-              </div>
-              <div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400 '>
-                <div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
-                  <span className='text-yellow-400 text-4xl '>
-                    <FaStar />
-                  </span>
-                  <div className='flex flex-col text-[.9rem] text-center text-slate-100'>
-                    <span>
-                      {details?.rating}{' '}
-                      <span className='text-slate-400'>/ 10</span>
-                    </span>
-                    {/* <span className="text-slate-500 text-sm"> {movie.vote_count} Reviews</span> */}
-                  </div>
-                </div>
+<div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
+  <div className=' flex '>
+<div>
+<button> <span>({details?.likes})</span>دوست داشتم</button>
+<button>دوست نداشتم <span>({details?.deslikes})</span></button>
+</div>
+    <button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
+      <span className='px-2 py-2 border-2 border-red-800 rounded-full'>
+        <GiShare />
+      </span>
+      اشتراک گذاری
+    </button>
+  </div>
+</div>
+<div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400 '>
+  <div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
+    <span className='text-yellow-400 text-4xl '>
+      <FaStar />
+    </span>
+    <div className='flex flex-col text-[.9rem] text-center text-slate-100'>
+      <span>
+        {details?.rating}{' '}
+        <span className='text-slate-400'>/ 10</span>
+      </span>
+      {/* <span className="text-slate-500 text-sm"> {movie.vote_count} Reviews</span> */}
+    </div>
+  </div>
 
-                {/* <span className="flex  gap-2">
-               <span className="text-[1rem] text-slate-400">Rate This Movie :</span>
-                <CustomizedRating movieId={movie?.id}  />
-                </span> */}
-              </div>
-              <div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
-                <p className='text-slate-100'>{details?.description}</p>
-              </div>
+  {/* <span className="flex  gap-2">
+ <span className="text-[1rem] text-slate-400">Rate This Movie :</span>
+  <CustomizedRating movieId={movie?.id}  />
+  </span> */}
+</div>
+<div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
+  <p className='text-slate-100'>{details?.description}</p>
+</div>
+        </div>
             </div>
 
             <div className='w-[300px] h-[400px] absolute left-[70%] top-[13rem]'>

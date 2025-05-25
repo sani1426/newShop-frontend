@@ -40,7 +40,7 @@ const page = async ({ params }) => {
               // }}
               alt={details?.name}
             >
-              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority fill />
+              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority={true} fill  loading='eager'/>
               <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-10'></div>
         <div className='z-20'>
         <h1 className='text-white  text-3xl '>{details?.name}</h1>

@@ -92,7 +92,7 @@ const page = async ({ params }) => {
 
         <div className='w-full bg_soft pt-7 px-2'>
         <h1 className='text-2xl lg:text-3xl font-bold mb-3'>فیلم های مشابه</h1>
-          <div className=' w-full mx-auto  grid md:grid-cols-2 lg-grid-cols-5 gap-5'>
+          <div className=' w-full mx-auto  grid md:grid-cols-2 lg:grid-cols-5 gap-5'>
             
             {
               similarMovies.map((item)=> (

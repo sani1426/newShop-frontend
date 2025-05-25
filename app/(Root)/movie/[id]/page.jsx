@@ -96,7 +96,7 @@ const page = async ({ params }) => {
             
             {
               similarMovies.map((item)=> (
-                <div key={item?._id} className='w-[350px] h-[450px] '>
+                <div key={item?._id} className='w-[350px] h-[350px] '>
                 <Card data={item} />
               </div>
               ))

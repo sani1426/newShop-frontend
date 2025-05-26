@@ -8,6 +8,7 @@ import { GiShare } from 'react-icons/gi'
 import Image from 'next/image'
 
 import SimilarCarousel from '@/components/shared/SimilarCarousel'
+import Link from 'next/link'
 
 const page = async ({ params }) => {
   let details
@@ -102,7 +103,7 @@ const page = async ({ params }) => {
             </div>
           </div>
 
-          
+
           <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem] z-20'>
             <Card data={details} />
           </div>

@@ -1,5 +1,6 @@
 import SummaryApi from '@/common'
-import HeroBanner from '@/components/shared/HeroBanner'
+
+import HomeCarousel from '@/components/shared/HomeCarousel';
 import FillterBar from '@/components/shared/fillterBar';
 import QuerySlider from '@/section/querySlider';
 import axios from 'axios';
@@ -19,7 +20,7 @@ export default async function Home() {
 
   return (
     <>
-      <HeroBanner bannerMovies={Movies} />
+       <HomeCarousel Movies={Movies} />
       <FillterBar />
       <section className='w-full bg_main py-8 px-4'>
       <QuerySlider category='movie' query="year" value="2025"  header="فیلم های 2025" />

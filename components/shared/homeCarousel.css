@@ -13,7 +13,7 @@
     position: absolute;
     top: 80%;
     transform: translateY(-70%);
-    left: 30%;
+    left: 70%;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     background-position: center;
@@ -43,11 +43,11 @@
   .carousel .list .item:nth-child(6) { left: calc(67% + 600px); }
   
   /* Hide items after 6th */
-  .carousel .list .item:nth-child(n+7) {
+  /* .carousel .list .item:nth-child(n+7) {
     left: calc(67% + 800px);
     opacity: 0;
   }
-  
+   */
   /* --- Content inside active item --- */
   .list .item .content {
     position: absolute;

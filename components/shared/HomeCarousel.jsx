@@ -15,13 +15,13 @@ const HomeCarousel = ({ Movies }) => {
         const items = document.querySelectorAll('.item');
         const runningTime = document.querySelector('.carousel .timeRunning');
     
-//         const timeRunning = 4000;
-// const timeAutoNext = 6000;
+        const timeRunning = 4000;
+const timeAutoNext = 6000;
 
-// let runTimeout;
-// let autoNext = setTimeout(() => {
-//   nextBtn.click();
-// }, timeAutoNext);
+let runTimeout;
+let autoNext = setTimeout(() => {
+  nextBtn.click();
+}, timeAutoNext);
 
 
 nextBtn.onclick = () => showSlider('next');

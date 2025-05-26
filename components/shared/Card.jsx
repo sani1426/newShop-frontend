@@ -5,7 +5,7 @@ import { FaStar } from 'react-icons/fa';
 
 const Card = ({data}) => {
   return (
-    <Link href={`/movie/${data?._id}`} className='aspect-[2/3] bg-gray-300  relative rounded-md overflow-hidden'>
+    <Link href={`/${data?.category}/${data?._id}`} className='aspect-[2/3] bg-gray-300  relative rounded-md overflow-hidden'>
     <img src={data?.movieImages[1]} className='object-cover w-full h-full rounded-md' alt='' />
     <div dir='ltr' className='Card_movie_Info'>
     <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>

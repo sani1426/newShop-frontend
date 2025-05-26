@@ -73,7 +73,7 @@ const page = async ({ params }) => {
       {/* <span className="text-slate-500 text-sm"> {movie.vote_count} Reviews</span> */}
     </div>
   </div>
-<div className='flex-center gap-4'>
+<div className='flex-center gap-4 text-white'>
   <div className='flex-center gap-2'>
   <h1>کارگردان :</h1>
   <h2>{details?.director}</h2>

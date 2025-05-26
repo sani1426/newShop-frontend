@@ -3,7 +3,7 @@
 
 const FillterBar = () => {
   return (
-   <section className='w-full bg_soft py-8 px-12'>
+   <section className='w-full bg_soft py-8 px-12 hidden lg:block'>
     <div className="mx auto bg_main rounded-md ">
         <form className='flex-center gap-10 py-3' >
             

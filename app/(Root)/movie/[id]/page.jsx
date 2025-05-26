@@ -73,11 +73,16 @@ const page = async ({ params }) => {
       {/* <span className="text-slate-500 text-sm"> {movie.vote_count} Reviews</span> */}
     </div>
   </div>
-
-  {/* <span className="flex  gap-2">
- <span className="text-[1rem] text-slate-400">Rate This Movie :</span>
-  <CustomizedRating movieId={movie?.id}  />
-  </span> */}
+<div className='flex-center gap-4'>
+  <div className='flex-center gap-2'>
+  <h1>کارگردان :</h1>
+  <h2>{details?.director}</h2>
+  </div>
+  <div className='flex-center gap-2'>
+  <h1>ستارگان :</h1>
+  <h2>{details?.stars}</h2>
+  </div>
+</div>
 </div>
 <div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
   <p className='text-slate-100'>{details?.description}</p>

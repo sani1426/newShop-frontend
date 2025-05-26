@@ -38,12 +38,12 @@ function resetTimeAnimation() {
 function showSlider(direction) {
   const sliderItems = list.querySelectorAll('.carousel .list .item');
 
-  if (direction === 'next') {
+  if (direction === 'prev') {
     list.appendChild(sliderItems[0]); 
-    carousel.classList.add('next');
+    carousel.classList.add('prev');
   } else {
     list.prepend(sliderItems[sliderItems.length - 1]); 
-    carousel.classList.add('prev');
+    carousel.classList.add('next');
   }
 
 

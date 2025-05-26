@@ -48,7 +48,7 @@ const page = async ({ params }) => {
         </div>
       </header>
 
-      <div className='w-full bg_soft pt-7 px-2'>
+      {/* <div className='w-full bg_soft pt-7 px-2'>
         <div className='container  mx-auto'>
           <div className='w-full flex-between'>
             <h1 className='text-2xl font-bold lg:text-3xl '>سریالهای مشابه</h1>
@@ -64,7 +64,7 @@ const page = async ({ params }) => {
             <Carousel data={similarMovies} />
           </section>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

@@ -58,12 +58,12 @@ const page = async ({ params }) => {
             </div>
 
             <p  dir='rtl' className='text-slate-100 my-2'>{details?.description}</p>
-            <div dir='rtl' className='flex-center gap-2'>
-            <h2>ژانرها :</h2>
+            <div dir='rtl' className='flex-center mt-2 gap-2 justify-start'>
+            <h2 className='text-white'>ژانرها :</h2>
             <div className='flex-center gap-4'>
               {
                 details?.genres.map((genre , index) => (
-                  <Link className='px-3 py-1 border-1 border-white text-white text-sm' key={index} href="/">
+                  <Link className='px-3 py-1 border-[1px] rounded-md border-white text-white text-sm' key={index} href="/">
                     {genre}
                   </Link>
                 ))

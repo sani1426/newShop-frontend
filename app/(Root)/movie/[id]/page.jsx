@@ -55,6 +55,8 @@ const page = async ({ params }) => {
                 <FaStar />
               </span>
             </div>
+
+            <p className='text-slate-100 my-2'>{details?.description}</p>
           </div>
           <div className='hidden lg:block w-[400px] h-[500px] absolute left-[3%] top-[4rem] z-20'>
             <Card data={details} />

@@ -20,7 +20,7 @@ const SimilarCarousel = ({movies , head}) => {
             </Link>
           </div>
 
-          <section className='mt-8'>
+          <section className='mt-8 w-full'>
             <Carousel data={movies} />
           </section>
         </div>

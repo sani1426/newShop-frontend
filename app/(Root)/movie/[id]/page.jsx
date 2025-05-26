@@ -90,7 +90,7 @@ const page = async ({ params }) => {
         </div>
             </div>
 
-            <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem]'>
+            <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem] z-20'>
               <Card data={details} />
             </div>
           </header>

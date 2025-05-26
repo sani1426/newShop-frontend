@@ -77,6 +77,17 @@ const page = async ({ params }) => {
                 <h2>زبان : {details?.language}</h2>
           
             </div>
+            <div dir='rtl' className='flex items-center justify-start gap-5 text-white mt-4'>
+                <h2>کارگردان : {details?.director}</h2>
+              <div className='flex items-center gap-2'>
+                <h1>بازیگران :</h1>
+                {
+                  details.stars.map((star , index) => (
+                    <h2 key={index}>{star}</h2>
+                  ))
+                }
+              </div>
+            </div>
           </div>
           <div className='hidden lg:block w-[400px] h-[500px] absolute left-[3%] top-[4rem] z-20'>
             <Card data={details} />

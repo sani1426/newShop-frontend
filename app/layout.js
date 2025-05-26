@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       <body className={vazir.className}>
         <AppContextProvider>
 
-          <main className=''>{children}</main>
+          <main className='overflow-x-hidden'>{children}</main>
 
         </AppContextProvider>
 

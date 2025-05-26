@@ -82,7 +82,7 @@ const page = async ({ params }) => {
               <div className='flex items-center gap-2'>
                 <h1>بازیگران :</h1>
                 {
-                  details.stars.map((star , index) => (
+                  details.Stars.map((star , index) => (
                     <h2 key={index}>{star}</h2>
                   ))
                 }

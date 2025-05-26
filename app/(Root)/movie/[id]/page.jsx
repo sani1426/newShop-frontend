@@ -42,7 +42,7 @@ const page = async ({ params }) => {
           />
           <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/55 to-black/50 z-10'></div>
 
-          <div className='z-20 absolute right-4 top-[6rem]'>
+          <div className='z-20 absolute right-4 top-[6rem] w-[50%]'>
             <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>
 
             <div className='flex items-center w-full justify-end  gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>

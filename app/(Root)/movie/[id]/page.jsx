@@ -51,7 +51,7 @@ const page = async ({ params }) => {
         </div>
       </header>
 
-      <div className='w-full bg_soft py-7 px-2'>
+      <div className='w-full bg_soft py-12 px-2'>
         <SimilarCarousel  movies={similarMovies} head='فیلم های مشابه'/>
       </div>
 

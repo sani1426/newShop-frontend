@@ -17,10 +17,10 @@ if(data.success){
 
 
   return (
-    <div className='pt-20 bg_soft'>
+    <div className='py-20 bg_soft'>
       <FillterBar />
 
-    <div className='container mx-auto'>
+    <div className='container mx-auto pt-5'>
       <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
 
       {

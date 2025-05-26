@@ -27,49 +27,51 @@ const page = async ({ params }) => {
 
   return (
     <>
+      <header dir='ltr' className='h-[100vh] '>
+        <div className='relative h-[100%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'>
+          <Image
+            src={details?.backdrop}
+            alt='--'
+            width={1000}
+            height={1000}
+            className='w-full h-full object-cover -z-1'
+            priority={true}
+            fill
+            loading='eager'
+          />
+          <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-10'></div>
 
-          <header dir='ltr' className='h-[100vh] '>
-            <div
-              className='relative h-[100%] w-full flex justify-end pb-2 flex-col gap-8 pl-8 pt-24'
-            >
-              <Image src={details?.backdrop} alt='--' width={1000} height={1000} className='w-full h-full object-cover -z-1' priority={true} fill  loading='eager'/>
-              <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-10'></div>
-   
-            <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem] z-20'>
-              <Card data={details} />
-            </div>
-            </div>
-          </header>
-
-
-        <div className='w-full bg_soft pt-7 px-2'>
-        <h1 className='text-2xl lg:text-3xl font-bold mb-3'>سریالهای مرتبط</h1>
-          <div className=' w-full mx-auto  grid md:grid-cols-2 lg:grid-cols-5 gap-5'>
-            
-            {
-              similarMovies.map((item)=> (
-                <div key={item?._id} className=' '>
-                <Card data={item} />
-              </div>
-              ))
-            }
+          <div className='hidden lg:block w-[300px] h-[400px] absolute left-[70%] top-[13rem] z-20'>
+            <Card data={details} />
           </div>
         </div>
-     
+      </header>
+
+      <div className='w-full bg_soft pt-7 px-2'>
+        <div className='container  mx-auto'>
+          <div className='w-full flex-between'>
+            <h1 className='text-2xl font-bold lg:text-3xl '>سریالهای مشابه</h1>
+            <Link
+              href={`/`}
+              className=' primary  text-white dark:text-black px-4 py-3 rounded-sm '
+            >
+              مشاهده بیشتر
+            </Link>
+          </div>
+
+          <section className='mt-8'>
+            <Carousel data={similarMovies} />
+          </section>
+        </div>
+      </div>
     </>
   )
 }
 
 export default page
 
-
-
-
-
-
-
-
-{/* <div className='z-20'>
+{
+  /* <div className='z-20'>
 <h1 className='text-white  text-3xl '>{details?.name}</h1>
 
 <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
@@ -115,4 +117,5 @@ export default page
 <p className='text-slate-100'>{details?.description}</p>
 </div>
 </div>
-    </div> */}
+    </div> */
+}

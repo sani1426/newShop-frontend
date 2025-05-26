@@ -3,7 +3,7 @@ import Carousel from '@/components/shared/carousel'
 
 import axios from 'axios'
 import Link from 'next/link'
-import { MdCategory } from 'react-icons/md'
+
 
 
 

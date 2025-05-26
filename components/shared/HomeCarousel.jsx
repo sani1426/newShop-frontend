@@ -77,7 +77,6 @@ resetTimeAnimation();
         {Movies.map((item) => (
           <div
             className='item'
-            // style={{background : `url(${item?.backdrop})`, backgroundSize : "cover" , backgroundPosition : "center" }}
           >
             <Image priority  src={item?.backdrop} alt="" width={1000} height={1000} fill className="w-full h-full object-cover" />
             <div className='content'>

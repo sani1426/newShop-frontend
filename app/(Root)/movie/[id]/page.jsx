@@ -70,6 +70,13 @@ const page = async ({ params }) => {
               }
             </div>
             </div>
+
+            <div className='flex items-center justify-start gap-5'>
+                <h2>زمان : {details?.duration}</h2>
+                <h2>اکران : {details?.Release}</h2>
+                <h2>زبان : {details?.language}</h2>
+          
+            </div>
           </div>
           <div className='hidden lg:block w-[400px] h-[500px] absolute left-[3%] top-[4rem] z-20'>
             <Card data={details} />

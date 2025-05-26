@@ -42,7 +42,7 @@ const page = async ({ params }) => {
           />
           <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-10'></div>
 
-          <div className='hidden lg:block w-[300px] h-[400px] absolute left-[20%] top-[13rem] z-20'>
+          <div className='hidden lg:block w-[400px] h-[450px] absolute left-[20%] top-[10rem] z-20'>
             <Card data={details} />
           </div>
         </div>

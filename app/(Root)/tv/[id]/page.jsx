@@ -6,7 +6,7 @@ import { RiPokerHeartsFill } from 'react-icons/ri'
 import { FaRegHeart } from 'react-icons/fa'
 import { GiShare } from 'react-icons/gi'
 import Image from 'next/image'
-import Carousel from '@/components/shared/carousel'
+
 import SimilarCarousel from '@/components/shared/SimilarCarousel'
 
 const page = async ({ params }) => {

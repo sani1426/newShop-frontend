@@ -45,7 +45,7 @@ const page = async ({ params }) => {
 <div className='z-20'>
   <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>
 </div>
-          <div className='hidden lg:block w-[400px] h-[450px] absolute left-[20%] top-[10rem] z-20'>
+          <div className='hidden lg:block w-[400px] h-[450px] absolute left-[5%] top-[5rem] z-20'>
             <Card data={details} />
           </div>
         </div>

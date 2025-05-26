@@ -55,8 +55,8 @@ const page = async ({ params }) => {
       اشتراک گذاری
     </button>
     <div className='flex-center gap-5'>
-<button className='px-4 py-2 border-2 border-slate-100 text-grown-100'> <span>({details?.likes})</span>دوست داشتم</button>
-<button className='px-4 py-2 border-slate-100 border-2 text-red-500'>دوست نداشتم <span>({details?.deslikes})</span></button>
+<button className='px-4 py-2 border-1 border-slate-200 text-grown-100'> <span>({details?.likes})</span>دوست داشتم</button>
+<button className='px-4 py-2 border-slate-200 border-1 text-red-500'>دوست نداشتم <span>({details?.disLikes})</span></button>
 </div>
   </div>
 </div>

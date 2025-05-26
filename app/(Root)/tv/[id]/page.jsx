@@ -71,7 +71,7 @@ const page = async ({ params }) => {
 
 export default page
 
-{
+
   /* <div className='z-20'>
 <h1 className='text-white  text-3xl '>{details?.name}</h1>
 
@@ -119,4 +119,4 @@ export default page
 </div>
 </div>
     </div> */
-}
+

@@ -7,6 +7,7 @@ import { FaRegHeart } from 'react-icons/fa'
 import { GiShare } from 'react-icons/gi'
 import Image from 'next/image'
 import Carousel from '@/components/shared/carousel'
+import SimilarCarousel from '@/components/shared/SimilarCarousel'
 
 const page = async ({ params }) => {
   let details
@@ -48,31 +49,16 @@ const page = async ({ params }) => {
         </div>
       </header>
 
-      {/* <div className='w-full bg_soft pt-7 px-2'>
-        <div className='container  mx-auto'>
-          <div className='w-full flex-between'>
-            <h1 className='text-2xl font-bold lg:text-3xl '>سریالهای مشابه</h1>
-            <Link
-              href={`/`}
-              className=' primary  text-white dark:text-black px-4 py-3 rounded-sm '
-            >
-              مشاهده بیشتر
-            </Link>
-          </div>
-
-          <section className='mt-8'>
-            <Carousel data={similarMovies} />
-          </section>
-        </div>
-      </div> */}
+      <div className='w-full bg_soft pt-7 px-2'>
+        <SimilarCarousel movies={similarMovies}  head='سریالهای مرتبط' />
+      </div>
     </>
   )
 }
 
 export default page
 
-
-  /* <div className='z-20'>
+/* <div className='z-20'>
 <h1 className='text-white  text-3xl '>{details?.name}</h1>
 
 <div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
@@ -119,4 +105,3 @@ export default page
 </div>
 </div>
     </div> */
-

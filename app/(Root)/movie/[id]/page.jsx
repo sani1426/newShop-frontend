@@ -6,7 +6,7 @@ import { RiPokerHeartsFill } from 'react-icons/ri'
 import { FaRegHeart } from 'react-icons/fa'
 import { GiShare } from 'react-icons/gi'
 import Image from 'next/image'
-import Carousel from '@/components/shared/carousel'
+import SimilarCarousel from '@/components/shared/SimilarCarousel'
 
 const page = async ({ params }) => {
   let details
@@ -48,75 +48,14 @@ const page = async ({ params }) => {
         </div>
       </header>
 
-      {/* <div className='w-full bg_soft pt-7 px-2'>
-        <div className='container  mx-auto'>
-          <div className='w-full flex-between'>
-            <h1 className='text-2xl font-bold lg:text-3xl '>فیلم های مرتبط</h1>
-            <Link
-              href={`/`}
-              className=' primary  text-white dark:text-black px-4 py-3 rounded-sm '
-            >
-              مشاهده بیشتر
-            </Link>
-          </div>
+      <div className='w-full bg_soft pt-7 px-2'>
+        <SimilarCarousel  movies={similarMovies} head='فیلم های مشابه'/>
+      </div>
 
-          <section className='mt-8'>
-            <Carousel data={similarMovies} />
-          </section>
-        </div>
-      </div> */}
+
     </>
   )
 }
 
 export default page
-
-
-  /* <div className='z-20'>
-<h1 className='text-white  text-3xl '>{details?.name}</h1>
-
-<div className='flexCenter mt-4 gap-12 w-[45%] border-t-2 border-b-2 py-2 border-slate-400 border-opacity-50 bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md  '>
-<div className=' flex '>
-
-<button className='px-6 py-2 text-red-800 rounded-md text-xl flex-center gap-2'>
-<span className='px-2 py-2 border-2 border-red-800 rounded-full'>
-<GiShare />
-</span>
-اشتراک گذاری
-</button>
-<div className='flex-center gap-5'>
-<button className='px-4 py-2 border-1 border-slate-200 text-grown-100'> <span>({details?.likes})</span>دوست داشتم</button>
-<button className='px-4 py-2 border-slate-200 border-1 text-red-500'>دوست نداشتم <span>({details?.disLikes})</span></button>
-</div>
-</div>
-</div>
-<div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400  bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)]'>
-<div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
-<span className='text-yellow-400 text-4xl '>
-<FaStar />
-</span>
-<div className='flex flex-col text-[.9rem] text-center text-slate-100'>
-<span>
-{details?.rating}{' '}
-<span className='text-slate-400'>/ 10</span>
-</span>
-{/* <span className="text-slate-500 text-sm"> {movie.vote_count} Reviews</span> 
-</div>
-</div>
-<div className='flex-center gap-4 text-white'>
-<div className='flex-center gap-2'>
-<h1>کارگردان :</h1>
-<h2>{details?.director}</h2>
-</div>
-<div className='flex-center gap-2'>
-<h1>ستارگان :</h1>
-<h2>{details?.stars}</h2>
-</div>
-</div>
-</div>
-<div className='w-[50%] bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)] rounded-md py-1'>
-<p className='text-slate-100'>{details?.description}</p>
-</div>
-</div>
-    </div> */
 

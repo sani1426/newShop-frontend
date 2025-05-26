@@ -9,7 +9,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <div className='lg:hidden py-3 w-full fixed bg-opacity-75  bottom-0  bg_soft z-[1000] '>
+      <div className='lg:hidden py-3 w-full fixed opacity-75  bottom-0  bg_soft z-[1000] '>
         <div className='flex items-center justify-evenly h-full transition-all duration-500'>
           {navItem.map((item) => (
             <Link

@@ -45,8 +45,8 @@ const page = async ({ params }) => {
           <div className='z-20 absolute right-4 top-[6rem]'>
             <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>
 
-            <div className='flex items-center w-full justify-start  gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
-              <div className='flex flex-col text-xl  '>
+            <div className='flex items-center w-full justify-end  gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
+              <div className='flex flex-col text-xl  text-white'>
                 <span>
                   {details?.rating} <span className=''>/ 10</span>
                 </span>

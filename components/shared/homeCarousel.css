@@ -159,22 +159,15 @@
   
   /* --- Responsive --- */
   @media screen and (max-width: 999px) {
-    header { padding-left: 50px; }
     .list .item .content { left: 50px; }
-    .content .title, .content .name { font-size: 70px; }
-    .content .des { font-size: 16px; }
+    .content .title, .content .name { font-size: 25px; }
+    .content .des { font-size: 11px; }
   }
   
   @media screen and (max-width: 690px) {
-    header nav a {
-      font-size: 14px;
-      margin-right: 0;
-    }
     .list .item .content { top: 40%; }
-    .content .title, .content .name { font-size: 45px; }
-    .content .btn button {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
+.carousel{
+  height: calc(100vh - 10rem);
+}
   }
   

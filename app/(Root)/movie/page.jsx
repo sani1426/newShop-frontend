@@ -17,15 +17,15 @@ if(data.success){
 
 
   return (
-    <div className='pt-20'>
+    <div className='pt-20 bg_soft'>
       <FillterBar />
 
     <div className='container mx-auto'>
-      <div className='grid grid-cols-3 lg-grid-cols-5 items-center justify-center gap-6'>
+      <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
 
       {
         Movies.map(item => (
-          <Card />
+          <Card key={item?._id}  data={item}/>
         ))
       }
       </div>

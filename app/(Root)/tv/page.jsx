@@ -1,16 +1,35 @@
-import SummaryApi from "@/common";
-import axios from "axios";
 
-
+import SummaryApi from '@/common';
+import Card from '@/components/shared/Card';
+import FillterBar from '@/components/shared/fillterBar';
+import axios from 'axios';
+import React from 'react'
 
 const page = async () => {
 
+let Tv ;
 
+const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
+
+if(data.success){
+  Tv = await data?.data
+}
 
 
   return (
-    <div dir="ltr">
-   
+    <div className='pt-20 bg_soft'>
+      <FillterBar />
+
+    <div className='container mx-auto'>
+      <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
+
+      {
+        Tv.map(item => (
+          <Card key={item?._id}  data={item}/>
+        ))
+      }
+      </div>
+    </div>
     </div>
   )
 }

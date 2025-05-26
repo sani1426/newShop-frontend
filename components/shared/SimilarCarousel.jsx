@@ -9,7 +9,7 @@ import Carousel from "./carousel"
 const SimilarCarousel = ({movies , head}) => {
   return (
  
-        <div className='container  mx-auto'>
+        <div className='w-full  mx-auto'>
           <div className='w-full flex-between'>
             <h1 className='text-2xl font-bold lg:text-3xl '>{head}</h1>
             <Link

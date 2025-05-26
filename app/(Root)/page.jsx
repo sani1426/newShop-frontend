@@ -28,10 +28,10 @@ export default async function Home() {
       <QuerySlider category="tv" value="newest" query="sortBy"  header="سریالهای به روز شده" />
       </section>
       <section className='w-full bg_main py-8 px-4'>
-      <QuerySlider  queyr="sortBy" value="popular"  header="محبوب ترین ها" />
+      <QuerySlider  query="sortBy" value="popular"  header="محبوب ترین ها" />
       </section>
       <section className='w-full bg_soft py-8 px-4'>
-      <QuerySlider  queyr="sortBy" value="topRated"  header="بالا ترین امتیاز" />
+      <QuerySlider  query="sortBy" value="topRated"  header="بالا ترین امتیاز" />
       </section>
      
     </>

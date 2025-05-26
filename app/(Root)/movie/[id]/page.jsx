@@ -57,35 +57,47 @@ const page = async ({ params }) => {
               </span>
             </div>
 
-            <p  dir='rtl' className='text-slate-100 my-2'>{details?.description}</p>
-            <div dir='rtl' className='flex items-center mt-4  gap-2 w-full justify-start'>
-            <h2 className='text-white'>ژانرها :</h2>
-            <div className='flex-center gap-4'>
-              {
-                details?.genres.map((genre , index) => (
-                  <Link className='px-3 py-1 border-[1px] rounded-md border-white text-white text-sm' key={index} href="/">
+            <p dir='rtl' className='text-slate-100 my-2'>
+              {details?.description}
+            </p>
+            <div
+              dir='rtl'
+              className='flex items-center mt-4  gap-2 w-full justify-start'
+            >
+              <h2 className='text-white'>ژانرها :</h2>
+              <div className='flex-center gap-4'>
+                {details?.genres.map((genre, index) => (
+                  <Link
+                    className='px-3 py-1 border-[1px] rounded-md border-white text-white text-sm'
+                    key={index}
+                    href='/'
+                  >
                     {genre}
                   </Link>
-                ))
-              }
-            </div>
+                ))}
+              </div>
             </div>
 
-            <div dir='rtl' className='flex items-center justify-start gap-5 text-white mt-4'>
-                <h2>زمان : <span> {details?.duration} دقیقه</span></h2>
-                <h2>اکران : {details?.Release}</h2>
-                <h2>زبان : {details?.language}</h2>
-          
+            <div
+              dir='rtl'
+              className='flex items-center justify-start gap-5 text-white mt-4'
+            >
+              <h2>
+                زمان : <span> {details?.duration} دقیقه</span>
+              </h2>
+              <h2>اکران : {details?.Release}</h2>
+              <h2>زبان : {details?.language}</h2>
             </div>
-            <div dir='rtl' className='flex items-center justify-start gap-5 text-white mt-4'>
-                <h2>کارگردان : {details?.director}</h2>
+            <div
+              dir='rtl'
+              className='flex items-center justify-start gap-5 text-white mt-4'
+            >
+              <h2>کارگردان : {details?.director}</h2>
               <div className='flex items-center gap-2'>
                 <h1>بازیگران :</h1>
-                {
-                  details.Stars.map((star , index) => (
-                    <h2 key={index}>{star}</h2>
-                  ))
-                }
+                {details.Stars.map((star, index) => (
+                  <h2 key={index}>{star}</h2>
+                ))}
               </div>
             </div>
           </div>

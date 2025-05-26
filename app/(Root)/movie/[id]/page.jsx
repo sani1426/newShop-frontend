@@ -42,24 +42,20 @@ const page = async ({ params }) => {
           />
           <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-black/45 z-10'></div>
 
-<div className='z-20 absolute right-4 top-[6rem]'>
-  <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>
+          <div className='z-20 absolute right-4 top-[6rem]'>
+            <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>
 
-  <div className='flex items-center gap-8 text-3xl  w-[55%] border-b-2 border-opacity-50  border-slate-400  bg-gradient-to-r from-[rgba(0,0,0,.5)] to-[rgba(0,0,0,.5)]'>
-<div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
-<span className='text-yellow-400 text-4xl '>
-<FaStar />
-</span>
-<div className='flex flex-col text-[.9rem] text-center text-slate-100'>
-<span>
-{details?.rating}{' '}
-<span className='text-slate-400'>/ 10</span>
-</span>
-
-</div>
-</div>
-</div>
-</div>
+            <div className='flex-center gap-2 border-slate-400 border-opacity-50  border-r-2 pr-4 pb-2'>
+              <div className='flex flex-col text-[.9rem] text-center text-slate-100'>
+                <span>
+                  {details?.rating} <span className='text-slate-400'>/ 10</span>
+                </span>
+              </div>
+              <span className='text-yellow-400 text-4xl '>
+                <FaStar />
+              </span>
+            </div>
+          </div>
           <div className='hidden lg:block w-[400px] h-[500px] absolute left-[3%] top-[4rem] z-20'>
             <Card data={details} />
           </div>
@@ -67,13 +63,10 @@ const page = async ({ params }) => {
       </header>
 
       <div className='w-full bg_soft py-12 px-2'>
-        <SimilarCarousel  movies={similarMovies} head='فیلم های مشابه'/>
+        <SimilarCarousel movies={similarMovies} head='فیلم های مشابه' />
       </div>
-
-
     </>
   )
 }
 
 export default page
-

@@ -71,7 +71,7 @@ const page = async ({ params }) => {
             </div>
             </div>
 
-            <div className='flex items-center justify-start gap-5'>
+            <div dir='rtl' className='flex items-center justify-start gap-5'>
                 <h2>زمان : {details?.duration}</h2>
                 <h2>اکران : {details?.Release}</h2>
                 <h2>زبان : {details?.language}</h2>

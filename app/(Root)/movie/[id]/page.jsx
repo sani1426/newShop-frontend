@@ -58,7 +58,7 @@ const page = async ({ params }) => {
             </div>
 
             <p  dir='rtl' className='text-slate-100 my-2'>{details?.description}</p>
-            <div dir='rtl' className='flex-center mt-2 gap-2 justify-start'>
+            <div dir='rtl' className='flex-center mt-2 gap-2 w-full justify-start'>
             <h2 className='text-white'>ژانرها :</h2>
             <div className='flex-center gap-4'>
               {

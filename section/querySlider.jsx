@@ -3,16 +3,17 @@ import Carousel from '@/components/shared/carousel'
 
 import axios from 'axios'
 import Link from 'next/link'
+import { MdCategory } from 'react-icons/md'
 
 
 
 
 
-const QuerySlider = async ({ value, header,query }) => {
+const QuerySlider = async ({ value, header,query , category }) => {
   let Movies = []
 
   const { data } = await axios.get(
-    `${SummaryApi.getMoviesByFillter.url}?${query}=${value}`
+    `${SummaryApi.getMoviesByFillter.url}?${query}=${value}&category=${category}`
   )
 
   if (data.success) {

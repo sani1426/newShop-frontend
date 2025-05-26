@@ -94,7 +94,10 @@ resetTimeAnimation();
           </div>
         ))}
 
-
+        <div className='arrows hidden'>
+          <button class='prev'>prev</button>
+          <button class='next'>next</button>
+        </div>
 
         <div className='timeRunning'></div>
       </div>

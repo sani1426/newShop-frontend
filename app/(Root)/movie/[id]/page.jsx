@@ -7,6 +7,7 @@ import { FaRegHeart } from 'react-icons/fa'
 import { GiShare } from 'react-icons/gi'
 import Image from 'next/image'
 import SimilarCarousel from '@/components/shared/SimilarCarousel'
+import Link from 'next/link'
 
 const page = async ({ params }) => {
   let details
@@ -57,6 +58,18 @@ const page = async ({ params }) => {
             </div>
 
             <p  dir='rtl' className='text-slate-100 my-2'>{details?.description}</p>
+            <div dir='rtl' className='flex-center gap-2'>
+            <h2>ژانرها :</h2>
+            <div className='flex-center gap-4'>
+              {
+                details?.genres.map((genre , index) => (
+                  <Link className='px-3 py-1 border-1 border-white text-white text-sm' key={index} href="/">
+                    {genre}
+                  </Link>
+                ))
+              }
+            </div>
+            </div>
           </div>
           <div className='hidden lg:block w-[400px] h-[500px] absolute left-[3%] top-[4rem] z-20'>
             <Card data={details} />

@@ -40,7 +40,7 @@ const page = async ({ params }) => {
             fill
             loading='eager'
           />
-          <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/75 to-black/45 z-10'></div>
+          <div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black/55 to-black/50 z-10'></div>
 
           <div className='z-20 absolute right-4 top-[6rem]'>
             <h1 className='text-3xl font-bold text-white'>{details?.name}</h1>

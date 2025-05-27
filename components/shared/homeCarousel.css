@@ -175,8 +175,6 @@
   /* From Uiverse.io by suleymanlaarabidev */ 
 .anime-card {
   box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 900;
 }
 
 .anime-card:hover {

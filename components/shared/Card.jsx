@@ -21,8 +21,7 @@ const Card = ({data}) => {
     </div>
       </div>
       <div className="flip-card-back">
-        <p className="title">BACK</p>
-        <p>Leave Me</p>
+      <img alt="" className="w-full h-full object-cover" src={data?.movieImages[0]}  />
       </div>
     </div>
   </Link>

@@ -24,10 +24,9 @@ const AnimationCard = ({data}) => {
       <div dir='ltr' className='Card_movie_Info z-10'>
       <div
               dir='rtl'
-              className='flex items-center mt-4  gap-2 w-full justify-start'
+              className='flex-center mt-4  gap-2 w-full h-full'
             >
-              <h2 className='text-white'>ژانرها :</h2>
-              <div className='flex-center gap-4'>
+              <div className='flex-center gap-4 flex-wrap'>
                 {data?.genres.map((genre, index) => (
                   <Link
                     className='px-3 py-1 border-[1px] rounded-md border-white text-white text-sm'

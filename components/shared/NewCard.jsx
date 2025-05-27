@@ -12,8 +12,8 @@ const NewCard = ({data}) => {
        <img src={data?.movieImages[1]} className='object-cover w-full h-full rounded-md' alt='' />
       </div>
       <div className="content">
-        <p className="heading text-nowrap text-ellipsis line-clamp-1">{data?.name}</p>
-        <p className="text-ellipsis line-clamp-6">
+        <p className="heading  text-ellipsis line-clamp-1">{data?.name}</p>
+        <p className="text-ellipsis line-clamp-6 text-xs">
          {data?.description}
         </p>
       </div>

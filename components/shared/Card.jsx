@@ -20,8 +20,8 @@ const Card = ({data}) => {
     </div>
       </div>
       <div className="second-content relative overflow-hidden">
-      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[1]} />
-    <span  className="bg-white z-10 absolute">saman</span>
+      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[0]} />
+    <span  className="text-white z-10 absolute">saman</span>
       </div>
     
     

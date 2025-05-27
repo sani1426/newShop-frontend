@@ -9,6 +9,7 @@ import Image from 'next/image'
 
 import SimilarCarousel from '@/components/shared/SimilarCarousel'
 import Link from 'next/link'
+import AnimatedCart from '@/components/shared/animatedCart'
 
 const page = async ({ params }) => {
   let details
@@ -111,6 +112,7 @@ const page = async ({ params }) => {
       <div className='w-full bg_soft py-7 px-2'>
         <SimilarCarousel movies={similarMovies}  head='سریالهای مرتبط' />
       </div>
+      <AnimatedCart />
     </>
   )
 }

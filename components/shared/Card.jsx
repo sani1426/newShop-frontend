@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Card = ({data}) => {
   return (
-    <Link  href={`/${data?.category}/${data?._id}`} className="anime-card w-[190px] h-[254px] transition-all duration-300 rounded-lg overflow-hidden">
+    <Link  href={`/${data?.category}/${data?._id}`} className="anime-card w-[190px] h-[254px] transition-all duration-300 rounded-lg overflow-hidden relative">
       <div className="first-content relative overflow-hidden">
        <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[1]}  />
        <div dir='ltr' className='Card_movie_Info'>
@@ -20,7 +20,7 @@ const Card = ({data}) => {
     </div>
       </div>
       <div className="second-content relative overflow-hidden">
-      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[0]} />
+    
     <span  className="text-white z-10 absolute">saman</span>
       </div>
     

@@ -21,6 +21,7 @@ const Topbar = () => {
 
   useEffect(()=>{
     fetchUser()
+    console.log(user);
   },[])
   return (
     <header className='h-20  bg_soft opacity-80 shadow-md fixed w-full z-[1000]'>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './homeCarousel.css'
+import { FaStar } from 'react-icons/fa'
 
 const AnimationCard = ({data}) => {
   return (

@@ -1,7 +1,7 @@
 
 import SummaryApi from '@/common';
 import AnimationCard from '@/components/shared/AnimationCard';
-import Card from '@/components/shared/Card';
+// import Card from '@/components/shared/Card';
 import FillterBar from '@/components/shared/fillterBar';
 import axios from 'axios';
 import React from 'react'

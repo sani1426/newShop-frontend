@@ -4,9 +4,9 @@ import { FaStar } from 'react-icons/fa'
 
 const AnimationCard = ({data}) => {
   return (
-    <Link href={`/${data?.category}/${data?._id}`}  className="flip-card">
-    <div className="flip-card-inner">
-      <div className="flip-card-front">
+    <Link href={`/${data?.category}/${data?._id}`}  className="flip-card rounded-lg">
+    <div className="flip-card-inner rounded-lg">
+      <div className="flip-card-front rounded-lg">
       <img alt="" className="w-full h-full object-cover" src={data?.movieImages[1]}  />
          <div dir='ltr' className='Card_movie_Info z-10'>
       <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>

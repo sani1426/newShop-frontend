@@ -9,7 +9,7 @@ const Card = ({data}) => {
     <Link href={`/${data?.category}/${data?._id}`}  class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[1]}  />
+      <img alt="" className="w-full h-full object-cover" src={data?.movieImages[1]}  />
          <div dir='ltr' className='Card_movie_Info'>
       <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>
     <div  className='flex gap-3 mt-2'>

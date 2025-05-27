@@ -6,31 +6,33 @@ import Image from 'next/image';
 
 const Card = ({data}) => {
   return (
-    <Link  href={`/${data?.category}/${data?._id}`} className="anime-card w-[190px] h-[254px] transition-all duration-300 rounded-lg overflow-hidden relative">
-      <div className="first-content relative overflow-hidden">
-       <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[1]}  />
-       <div dir='ltr' className='Card_movie_Info'>
-    <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>
-  <div  className='flex gap-3 mt-2'>
-    <span className='text-yellow-400 text-lg'>
-      <FaStar />
-    </span>
-    <span className='text-white'>{`${data?.rating} / 10`}</span>
-  </div>
+    <Link href={`/${data?.category}/${data?._id}`}  class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src={data?.movieImages[1]}  />
+         <div dir='ltr' className='Card_movie_Info'>
+      <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>
+    <div  className='flex gap-3 mt-2'>
+      <span className='text-yellow-400 text-lg'>
+        <FaStar />
+      </span>
+      <span className='text-white'>{`${data?.rating} / 10`}</span>
+    </div>
     </div>
       </div>
-      <div className="second-content relative overflow-hidden">
-      <img alt="" className="w-full h-full object-cover" src={data?.movieImages[0]} />
-    <span  className="text-white z-10 absolute">saman</span>
+      <div class="flip-card-back">
+        <p class="title">BACK</p>
+        <p>Leave Me</p>
       </div>
-    
-    
-    </Link>
+    </div>
+  </Link>
 );
 
 }
 
 export default Card
+
+
 
 
 

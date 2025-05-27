@@ -112,7 +112,7 @@ const page = async ({ params }) => {
       <div className='w-full bg_soft py-7 px-2'>
         <SimilarCarousel movies={similarMovies}  head='سریالهای مرتبط' />
       </div>
-      {/* <AnimatedCart /> */}
+      <AnimatedCart />
     </>
   )
 }

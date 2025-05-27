@@ -32,7 +32,7 @@ const Carousel = ({data}) => {
         {data.map((movie) => (
           <SwiperSlide key={movie._id}>
             <div>
-              <AnimationCard data={movie} />
+              <Card data={movie} />
             </div>
           </SwiperSlide>
         ))}

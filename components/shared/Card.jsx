@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 const Card = ({data}) => {
   return (
-    <Link href={`/${data?.category}/${data?._id}`}  class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
+    <Link href={`/${data?.category}/${data?._id}`}  className="flip-card">
+    <div className="flip-card-inner">
+      <div className="flip-card-front">
       <img alt="" className="w-full h-full object-cover" src={data?.movieImages[1]}  />
          <div dir='ltr' className='Card_movie_Info'>
       <h2 className='text-white text-nowrap text-ellipsis line-clamp-1'>{data?.name}</h2>
@@ -20,8 +20,8 @@ const Card = ({data}) => {
     </div>
     </div>
       </div>
-      <div class="flip-card-back">
-        <p class="title">BACK</p>
+      <div className="flip-card-back">
+        <p className="title">BACK</p>
         <p>Leave Me</p>
       </div>
     </div>
@@ -33,6 +33,18 @@ const Card = ({data}) => {
 export default Card
 
 
+
+{/* <div class="card">
+<img alt="" className="w-full h-full object-cover" src={data?.movieImages[1]}  />
+  <div class="card__content">
+    <p class="card__title">Card Title</p>
+    <p class="card__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco.
+    </p>
+  </div>
+</div> */}
 
 
 

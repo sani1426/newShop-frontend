@@ -1,6 +1,7 @@
 
 import SummaryApi from '@/common';
-import Card from '@/components/shared/Card';
+import AnimationCard from '@/components/shared/AnimationCard';
+
 import FillterBar from '@/components/shared/fillterBar';
 import axios from 'axios';
 import React from 'react'
@@ -25,7 +26,7 @@ if(data.success){
 
       {
         Movies.map(item => (
-          <Card key={item?._id}  data={item}/>
+          <AnimationCard key={item?._id}  data={item}/>
         ))
       }
       </div>

@@ -1,5 +1,6 @@
 
 import SummaryApi from '@/common';
+import AnimationCard from '@/components/shared/AnimationCard';
 import Card from '@/components/shared/Card';
 import FillterBar from '@/components/shared/fillterBar';
 import axios from 'axios';
@@ -25,7 +26,7 @@ if(data.success){
 
       {
         Tv.map(item => (
-          <Card key={item?._id}  data={item}/>
+          <AnimationCard key={item?._id}  data={item}/>
         ))
       }
       </div>

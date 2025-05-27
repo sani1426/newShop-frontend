@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import Card from '@/components/shared/Card'
-import AnimationCard from './AnimationCard';
+
 
 const Carousel = ({data}) => {
   return (
@@ -31,7 +31,7 @@ const Carousel = ({data}) => {
         {data.map((movie) => (
           <SwiperSlide key={movie._id}>
             <div>
-              <AnimationCard data={movie} />
+              <Card data={movie} />
             </div>
           </SwiperSlide>
         ))}

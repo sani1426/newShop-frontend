@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa'
 
 const AnimationCard = ({data}) => {
   return (
-    <Link href={`/${data?.category}/${data?._id}`}  className="flip-card rounded-lg">
+    <Link href={`/${data?.category}/${data?._id}`}  className="flip-card rounded-lg aspect-[2/3]">
     <div className="flip-card-inner rounded-lg">
       <div className="flip-card-front rounded-lg">
       <img alt="" className="w-full h-full object-cover" src={data?.movieImages[1]}  />

@@ -3,18 +3,25 @@ import { MdLogin } from 'react-icons/md'
 import Logo from './logo.jsx'
 import { FaUserCircle } from 'react-icons/fa'
 import Link from 'next/link'
-import { useAppContext } from '@/context/appContext.jsx'
+// import { useAppContext } from '@/context/appContext.jsx'
 import ThemeToggle from '../themeToggle/ThemeToggle.jsx'
-import MenuBar from './MobileNav.jsx'
+
 import { navItem } from '@/data/constance.js'
 
 import SearchToggle from '../themeToggle/searchToggle.jsx'
 import { usePathname } from 'next/navigation.js'
+import { useUserStore } from '@/store/userStore.js'
+import { useEffect } from 'react'
 
 const Topbar = () => {
   const pathname = usePathname()
-  const { user, setUser } = useAppContext()
+  // const { user, setUser } = useAppContext()
+  const fetchUser = useUserStore(state => state.fetchUserDetails)
+  const user = useUserStore(state => state.user)
 
+  useEffect(()=>{
+    fetchUser()
+  },[])
   return (
     <header className='h-20  bg_soft opacity-80 shadow-md fixed w-full z-[1000]'>
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>

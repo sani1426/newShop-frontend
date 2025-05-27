@@ -11,7 +11,8 @@ const AnimatedCart = () => {
        <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src='/images/movies/Black Panther Wakanda Forever 2022-1.jpg' />
       </div>
       <div className="second-content">
-    <span>Second</span>
+      <Image alt="" width={1000} height={1000} className="w-full h-full object-cover" src='/images/movies/Black Panther Wakanda Forever 2022-1.jpg z-[-1]' />
+    <span className="bg-white z-10">saman</span>
       </div>
     
     

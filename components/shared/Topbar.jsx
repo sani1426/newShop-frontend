@@ -17,7 +17,7 @@ const Topbar = () => {
   const pathname = usePathname()
   const { user, getUserDetails } = useAppContext()
 
-  useEffect(()=>getUserDetails() , [])
+  useEffect(()=>getUserDetails() , [user])
   return (
     <header className='h-20  bg_soft opacity-80 shadow-md fixed w-full z-[1000]'>
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>

@@ -286,8 +286,8 @@
 }
 
 .new-card .content .heading {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .new-card:hover .content {

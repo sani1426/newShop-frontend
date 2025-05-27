@@ -7,5 +7,6 @@ export const useUserStore = create((set) => ({
         await fetch(SummaryApi.UserDetail.url)
         .then(response => response.json())
         .then(data => set({user : data?.data}))
+        .then(console.log(user))
     }
 }))

@@ -214,8 +214,26 @@
   font-size: 0px;
   transform: rotate(90deg) scale(-1);
 }
+.second-content img {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
 
 .anime-card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+.anime-card:hover .second-content img {
   opacity: 1;
   height: 100%;
   font-size: 1.8rem;

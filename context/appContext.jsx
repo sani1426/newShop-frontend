@@ -21,7 +21,7 @@ export const AppContextProvider = ({ children }) => {
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
-
+  useEffect(()=>getUserDetails() , [])
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -31,7 +31,7 @@ export const AppContextProvider = ({ children }) => {
     }
   }, [theme])
   return (
-    <AppContext.Provider value={{ user, setUser, theme, toggleTheme,getUserDetails }}>
+    <AppContext.Provider value={{ user, setUser, theme, toggleTheme }}>
       {children}
     </AppContext.Provider>
   )

@@ -29,7 +29,7 @@ const SearchToggle = () => {
   useEffect(() => {
     const timeOut = setTimeout(async () => {
       if (query) {
-        const { data } = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`);
+        const { data } = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${query}`);
         setSearchResult(data.data);
       } else {
         setSearchResult([]);

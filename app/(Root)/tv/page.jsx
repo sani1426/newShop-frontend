@@ -7,12 +7,12 @@ import PageChanging from '@/components/shared/pagination';
 import axios from 'axios';
 import React from 'react'
 
-const page = async () => {
-
+const page = async ({searchParams}) => {
+  const {pageNumber} = await searchParams
 let Tv ;
 let total ;
 
-const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
+const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv?pageNumber=${Number(pageNumber)}`)
 
 if(data.success){
   Tv = await data?.data

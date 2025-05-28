@@ -15,10 +15,11 @@ function PageChanging({category , totalDocument}) {
   }
   useEffect(()=>{
     router.push(`/${category}?pageNumber=${currentPage}`)
+    console.log(totalAmount);
   },[currentPage])
   return (
     <div dir="ltr" className="flex overflow-x-auto sm:justify-center mt-8">
-      <Pagination dir="ltr" currentPage={currentPage} totalPages={totalAmount} onPageChange={onPageChange} showIcons />
+      <Pagination dir="ltr" currentPage={currentPage} totalPages={2} onPageChange={onPageChange} showIcons />
     </div>
   );
 }

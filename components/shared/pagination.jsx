@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 function PageChanging({category , totalDocument}) {
     const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalAmount , setTotalAmount]=useState(Math.ceil(totalDocument/8))
+  const [totalAmount , setTotalAmount]=useState(Math.ceil(Number(totalDocument) / 8))
 
   const onPageChange = (page) => {
     setCurrentPage(page);

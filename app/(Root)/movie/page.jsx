@@ -13,7 +13,7 @@ const page = async ({searchParams}) => {
   let Movies ;
   let total ;
 const {pageNumber} = await searchParams
-console.log(pageNumber);
+
   const { data } = await axios.get(
     `${SummaryApi.getMoviesByCategory.url}/movie?pageNumber=${Number(pageNumber)}`
   )

@@ -15,7 +15,7 @@ function PageChanging() {
   }
   return (
     <div dir="ltr" className="flex overflow-x-auto sm:justify-center">
-      <Pagination currentPage={currentPage} totalPages={100} onPageChange={onPageChange} showIcons />
+      <Pagination currentPage={currentPage} totalPages={4} onPageChange={onPageChange} showIcons />
     </div>
   );
 }

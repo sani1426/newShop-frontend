@@ -14,7 +14,7 @@ function PageChanging() {
     router.push(`/movie?pageNumber=${currentPage}`)
   }
   return (
-    <div className="flex overflow-x-auto sm:justify-center">
+    <div dir="ltr" className="flex overflow-x-auto sm:justify-center">
       <Pagination currentPage={currentPage} totalPages={100} onPageChange={onPageChange} showIcons />
     </div>
   );

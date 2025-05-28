@@ -16,7 +16,7 @@ const SearchToggle = () => {
   const [searchvalue , setSearchValue] = useState()
 
   const handleSearch = async (e) => {
-    setSearchValue(e.target.value)
+    setSearchValue(prev => prev + e.target.value)
     console.log(searchvalue);
     const {data} = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`)
 

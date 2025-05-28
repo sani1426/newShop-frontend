@@ -47,7 +47,7 @@ export default async function Home() {
           category=''
           query='sortBy'
           value='topRated'
-          header='بالا ترین امتیاز'
+          header='بالا ترین امتیاز ها'
         />
       </section>
     </>

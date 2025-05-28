@@ -9,7 +9,7 @@ import React from 'react'
 
 const page = async ({searchParams}) => {
   let Movies
-const {pageNumber} = await searchParams || 1
+const {pageNumber} = await searchParams
 console.log(pageNumber);
   const { data } = await axios.get(
     `${SummaryApi.getMoviesByCategory.url}/movie?pageNumber=${Number(pageNumber)}`

@@ -14,7 +14,7 @@ export const navItem = [
       id: 2,
       label: 'فیلم',
       icon : <BiSolidMoviePlay /> ,
-      href: '/movie',
+      href: '/movie?pageNumber=1',
     },
     {
       id: 3,

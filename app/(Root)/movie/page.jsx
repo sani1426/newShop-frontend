@@ -2,16 +2,17 @@ import SummaryApi from '@/common'
 import AnimationCard from '@/components/shared/AnimationCard'
 
 import FillterBar from '@/components/shared/fillterBar'
-import { Pagination } from '@/components/shared/pagination'
+import PageChanging from '@/components/shared/pagination'
+
 import axios from 'axios'
 import React from 'react'
 
 const page = async ({searchParams}) => {
   let Movies
-const {pageNumber} = await searchParams
+const {pageNumber} = await searchParams || 1
 console.log(pageNumber);
   const { data } = await axios.get(
-    `${SummaryApi.getMoviesByCategory.url}/movie`
+    `${SummaryApi.getMoviesByCategory.url}/movie?pageNumber=${Number(pageNumber)}`
   )
 
   if (data.success) {
@@ -29,7 +30,7 @@ console.log(pageNumber);
           ))}
         </div>
       </div>
-      <Pagination />
+      <PageChanging />
     </div>
   )
 }

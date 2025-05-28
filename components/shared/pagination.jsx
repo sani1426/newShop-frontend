@@ -5,7 +5,7 @@ import { Pagination } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export function Pagination() {
+function PageChanging() {
     const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -19,3 +19,5 @@ export function Pagination() {
     </div>
   );
 }
+
+export default PageChanging

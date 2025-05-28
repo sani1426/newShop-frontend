@@ -5,7 +5,7 @@ import { Pagination } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-function PageChanging({category}) {
+function PageChanging({category , totalDocument}) {
     const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -17,7 +17,7 @@ function PageChanging({category}) {
   },[currentPage])
   return (
     <div dir="ltr" className="flex overflow-x-auto sm:justify-center mt-8">
-      <Pagination dir="ltr" currentPage={currentPage} totalPages={4} onPageChange={onPageChange} showIcons />
+      <Pagination dir="ltr" currentPage={currentPage} totalPages={totalDocument/8} onPageChange={onPageChange} showIcons />
     </div>
   );
 }

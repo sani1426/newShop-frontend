@@ -2,6 +2,7 @@
 
 
 import AnimationCard from '@/components/shared/AnimationCard'
+
 import { useAppContext } from '@/context/appContext'
 import React from 'react'
 

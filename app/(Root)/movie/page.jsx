@@ -10,7 +10,8 @@ import axios from 'axios'
 import React from 'react'
 
 const page = async ({searchParams}) => {
-  let Movies
+  let Movies ;
+  let total ;
 const {pageNumber} = await searchParams
 console.log(pageNumber);
   const { data } = await axios.get(
@@ -19,6 +20,7 @@ console.log(pageNumber);
 
   if (data.success) {
     Movies = await data?.data
+    total = data?.totalDocument
   }
 
   return (
@@ -32,7 +34,7 @@ console.log(pageNumber);
           ))}
         </div>
       </div>
-      <PageChanging category="movie" />
+      <PageChanging category="movie" totalDocument={total} />
     </div>
   )
 }

@@ -6,9 +6,10 @@ import { Pagination } from '@/components/shared/pagination'
 import axios from 'axios'
 import React from 'react'
 
-const page = async () => {
+const page = async ({searchParams}) => {
   let Movies
-
+const {pageNumber} = await searchParams
+console.log(pageNumber);
   const { data } = await axios.get(
     `${SummaryApi.getMoviesByCategory.url}/movie`
   )

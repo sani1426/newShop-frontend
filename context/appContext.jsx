@@ -9,6 +9,7 @@ const AppContext = createContext()
 export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState()
   const [theme, setTheme] = useState('light')
+  const [searchResult, setSearchResult] = useState([])
 
   const getUserDetails = async () => {
     const { result } = await useFetchData(SummaryApi.UserDetail.url, 'get')

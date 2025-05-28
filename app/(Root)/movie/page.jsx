@@ -2,7 +2,8 @@ import SummaryApi from '@/common'
 import AnimationCard from '@/components/shared/AnimationCard'
 
 import FillterBar from '@/components/shared/fillterBar'
-import PageChanging from '@/components/shared/pagination'
+import Pagination from '@/components/shared/pagination'
+
 
 import axios from 'axios'
 import React from 'react'
@@ -30,7 +31,7 @@ console.log(pageNumber);
           ))}
         </div>
       </div>
-      <PageChanging />
+      <Pagination />
     </div>
   )
 }

@@ -34,7 +34,7 @@ const {pageNumber} = await searchParams
           ))}
         </div>
       </div>
-      <PageChanging category="movie" totalDocument={total} />
+      <PageChanging category="movie"  totalDocument={total} />
     </div>
   )
 }

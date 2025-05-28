@@ -34,7 +34,7 @@ if(data.success){
       }
       </div>
     </div>
-    <PageChanging category="tv" totalDocument={total} />
+    <PageChanging category="tv"   totalDocument={total} />
     </div>
   )
 }

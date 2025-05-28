@@ -2,6 +2,7 @@
 
 
 import AnimationCard from '@/components/shared/AnimationCard'
+import FillterBar from '@/components/shared/fillterBar'
 
 import { useAppContext } from '@/context/appContext'
 import React from 'react'
@@ -11,7 +12,7 @@ const page = () => {
     
   return (
     <div className='py-20 bg_soft'>
- 
+      <FillterBar />
 
   <div className='container mx-auto pt-8'>
     <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>

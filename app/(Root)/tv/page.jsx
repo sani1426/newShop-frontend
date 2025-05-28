@@ -16,7 +16,7 @@ const {data} = await axios.get(`${SummaryApi.getMoviesByCategory.url}/tv`)
 
 if(data.success){
   Tv = await data?.data
-  totalDocument = data?.totalDocument
+  totalDocument = await data?.totalDocument
 }
 
 

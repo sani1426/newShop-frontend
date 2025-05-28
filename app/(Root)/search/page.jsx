@@ -7,6 +7,7 @@ import React from 'react'
 
 const page = () => {
     const {searchResult}=useAppContext()
+    
   return (
     <div className='py-20 bg_soft'>
  
@@ -15,7 +16,7 @@ const page = () => {
     <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
 
     {
-            searchResult ? (
+            searchResult.lentgh > 0 ? (
                 searchResult.map(item => (
                     <AnimationCard key={item?._id}  data={item}/>
                   ))

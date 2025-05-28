@@ -5,7 +5,7 @@ import { useAppContext } from '@/context/appContext'
 import axios from 'axios'
 import { usePathname, useRouter } from 'next/navigation'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IoSearchOutline } from 'react-icons/io5'
 
 const SearchToggle = () => {
@@ -13,17 +13,33 @@ const SearchToggle = () => {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
-  const [searchvalue , setSearchValue] = useState('')
+  const [query , setQuery] = useState('')
 
-  const handleSearch = async (e) => {
-    setSearchValue(e.target.value)
-    console.log(searchvalue);
-    const {data} = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`)
+  // const handleSearch = async (e) => {
+  //   setSearchValue(e.target.value)
+  //   console.log(searchvalue);
+  //   const {data} = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`)
 
-    if(data?.success){
-      setSearchResult(data?.data)
-    }
-  }
+  //   if(data?.success){
+  //     setSearchResult(data?.data)
+  //   }
+  // }
+
+
+  useEffect(() => {
+    const timeOut = setTimeout(async () => {
+      if (query) {
+        const { data } = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`);
+        setSearchResult(data.data);
+      } else {
+        setSearchResult([]);
+      }
+    }, 800);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, [query]);
+
   return (
     <>
       <button
@@ -41,8 +57,8 @@ const SearchToggle = () => {
 
         <div className={`w-full lg:w-[500px] h-[5rem] flex-center bg_soft absolute py-2 px-8 lg:px-5 top-[5.5rem] left-0 rounded-md transition-all duration-500  ${open ? "opacity-1 pointer-events-auto" : 'opacity-0 pointer-events-none'} `}>
           <input
-          value={searchvalue}
-          onChange={handleSearch}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
             className='w-full rounded-md px-4 py-2 bg-gray-300 '
             type='text'
             placeholder='سرچ کنید'

@@ -5,7 +5,7 @@ import { Pagination } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-function PageChanging() {
+function PageChanging({category}) {
     const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -13,7 +13,7 @@ function PageChanging() {
     setCurrentPage(page);
   }
   useEffect(()=>{
-    router.push(`/movie?pageNumber=${currentPage}`)
+    router.push(`/${category}?pageNumber=${currentPage}`)
   },[currentPage])
   return (
     <div dir="ltr" className="flex overflow-x-auto sm:justify-center mt-8">

@@ -32,7 +32,7 @@ console.log(pageNumber);
           ))}
         </div>
       </div>
-      <PageChanging />
+      <PageChanging category="movie" />
     </div>
   )
 }

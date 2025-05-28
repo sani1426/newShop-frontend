@@ -32,7 +32,7 @@ export const AppContextProvider = ({ children }) => {
     }
   }, [theme])
   return (
-    <AppContext.Provider value={{ user, setUser, theme, toggleTheme }}>
+    <AppContext.Provider value={{ user, setUser, theme, toggleTheme , searchResult , setSearchResult }}>
       {children}
     </AppContext.Provider>
   )

@@ -16,7 +16,7 @@ const page = () => {
     <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
 
     {
-            searchResult.lentgh > 0 ? (
+            searchResult ? (
                 searchResult.map(item => (
                     <AnimationCard key={item?._id}  data={item}/>
                   ))

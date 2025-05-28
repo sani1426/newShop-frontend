@@ -15,16 +15,6 @@ const SearchToggle = () => {
   const [open, setOpen] = useState(false)
   const [query , setQuery] = useState('')
 
-  // const handleSearch = async (e) => {
-  //   setSearchValue(e.target.value)
-  //   console.log(searchvalue);
-  //   const {data} = await axios.get(`${SummaryApi.getMoviesByFillter.url}?search=${searchvalue}`)
-
-  //   if(data?.success){
-  //     setSearchResult(data?.data)
-  //   }
-  // }
-
 
   useEffect(() => {
     const timeOut = setTimeout(async () => {

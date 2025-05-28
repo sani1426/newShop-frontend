@@ -20,7 +20,7 @@ console.log(pageNumber);
 
   if (data.success) {
     Movies = await data?.data
-    total = data?.totalDocument
+    total = await data?.totalDocument
   }
 
   return (

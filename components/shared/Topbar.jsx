@@ -10,6 +10,7 @@ import { navItem } from '@/data/constance.js'
 
 import SearchToggle from '../themeToggle/searchToggle.jsx'
 import { usePathname } from 'next/navigation.js'
+import DropdownMenu from '../ui/DropdownMegaMenu.jsx'
 
 
 
@@ -41,6 +42,9 @@ const Topbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <DropdownMenu />
+            </li>
           </ul>
         </div>
 

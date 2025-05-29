@@ -25,11 +25,11 @@ const Topbar = () => {
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('#navbar');
       if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-        navbar.classList.add('bg_soft');
+        navbar.classList.add('bg_main');
         navbar.classList.remove('nav-class');
         console.log('scroll')
       } else {
-        navbar.classList.remove('bg_soft');
+        navbar.classList.remove('bg_main');
         navbar.classList.add('nav-class');
       }
     });

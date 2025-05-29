@@ -22,9 +22,11 @@ const Topbar = () => {
   useEffect(()=>{
     const nav = document.getElementById('navbar')
 
-    window.addEventListener('scrollY' , ()=>{
+    window.addEventListener('scroll' , ()=>{
       
-        console.log("scroll");
+        if(Window.scrollY > 20){
+          console.log('scroll')
+        }
     })
  
   } ,[])

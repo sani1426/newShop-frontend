@@ -3,7 +3,7 @@
 import AwesomeSlider from 'react-awesome-slider';
 import AwesomeSliderStyles from 'react-awesome-slider/src/styled/cube-animation.scss';
 
-const AutoplaySlider = withAutoplay(AwesomeSlider);
+
 const CubeCarousel = () => {
     return(
 

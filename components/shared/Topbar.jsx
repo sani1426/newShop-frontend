@@ -10,7 +10,8 @@ import { navItem } from '@/data/constance.js'
 
 import SearchToggle from '../themeToggle/searchToggle.jsx'
 import { usePathname } from 'next/navigation.js'
-import DropdownMenu from '../ui/DropdownMegaMenu.jsx'
+import { useEffect } from 'react'
+
 
 
 
@@ -18,6 +19,18 @@ const Topbar = () => {
   const pathname = usePathname()
   const { user } = useAppContext()
 
+  useEffect(()=>{
+    const nav = document.getElementById('navbar')
+
+    nav.addEventListener('scroll' , ()=>{
+      if(window.scrollY > 20){
+        nav.classList.add("bg_soft")
+        nav.classList.remove("backdrop:blur-xl")
+      }else{
+        nav.classList.remove('bg_soft')
+      }
+    })
+  } ,[])
 
   return (
     <header id='navbar' className='h-20  backdrop:blur-xl shadow-md fixed w-full z-[1000]'>

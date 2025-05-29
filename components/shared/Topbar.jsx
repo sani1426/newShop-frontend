@@ -22,8 +22,8 @@ const Topbar = () => {
   useEffect(()=>{
     const nav = document.getElementById('navbar')
 
-    nav.addEventListener('scroll' , ()=>{
-      if(window.scrollY < 30){
+    window.addEventListener('scroll' , ()=>{
+      if(scrollY < 30){
         nav.classList.add("bg_soft")
         nav.classList.remove("backdrop:blur-xl")
         console.log("scroll");

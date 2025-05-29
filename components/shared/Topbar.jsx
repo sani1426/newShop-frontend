@@ -22,15 +22,15 @@ const Topbar = () => {
   useEffect(()=>{
     const nav = document.getElementById('navbar')
 
-    window.addEventListener('scroll' , ()=>{
-    
+    window.addEventListener('scrollY' , ()=>{
+      
         console.log("scroll");
     })
  
   } ,[])
 
   return (
-    <header id='navbar' className='h-20 bg-[rgba(0,0,0,.6)] backdrop:blur-xl shadow-md fixed w-full z-[1000] text-white'>
+    <header id='navbar' className='h-20 bg-[rgba(255,255,255,.5)] backdrop:blur-xl shadow-md fixed w-full z-[1000] text-black dark:bg-[rgba(0,0,0,.5)] dark:text-white'>
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />

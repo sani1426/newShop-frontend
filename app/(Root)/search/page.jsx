@@ -10,7 +10,7 @@ import React from 'react'
 
 const page = () => {
     const {searchResult}=useAppContext()
-    
+ 
   return (
     <div className='py-20 bg_soft'>
       <FillterBar />

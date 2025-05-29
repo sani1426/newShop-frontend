@@ -19,8 +19,8 @@ const MobileNav = () => {
                 pathname === item?.href && 'text-grown-100 '
               }`}
             >
-              <div className='text-xl'>{item?.icon}</div>
-              <p className='text-sm'>{item?.label}</p>
+              <div className='text-2xl'>{item?.icon}</div>
+              <p className=''>{item?.label}</p>
             </Link>
           ))}
         </div>

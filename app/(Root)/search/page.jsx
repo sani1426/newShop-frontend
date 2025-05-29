@@ -2,7 +2,7 @@
 
 
 import AnimationCard from '@/components/shared/AnimationCard'
-import CubeCarousel from '@/components/shared/CubeCarousel'
+
 import FillterBar from '@/components/shared/fillterBar'
 
 import { useAppContext } from '@/context/appContext'
@@ -34,7 +34,6 @@ const page = () => {
     </div>
   </div>
 
-  <CubeCarousel />
   </div>
   )
 }

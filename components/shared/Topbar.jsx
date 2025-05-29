@@ -23,9 +23,10 @@ const Topbar = () => {
     const nav = document.getElementById('navbar')
 
     nav.addEventListener('scroll' , ()=>{
-      if(window.scrollY > 20){
+      if(window.scrollY < 30){
         nav.classList.add("bg_soft")
         nav.classList.remove("backdrop:blur-xl")
+        console.log("scroll");
       }else{
         nav.classList.remove('bg_soft')
       }
@@ -33,7 +34,7 @@ const Topbar = () => {
   } ,[])
 
   return (
-    <header id='navbar' className='h-20  backdrop:blur-xl shadow-md fixed w-full z-[1000]'>
+    <header id='navbar' className='h-20 bg-black backdrop:blur-xl shadow-md fixed w-full z-[1000]'>
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />

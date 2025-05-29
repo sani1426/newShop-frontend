@@ -12,32 +12,30 @@ import SearchToggle from '../themeToggle/searchToggle.jsx'
 import { usePathname } from 'next/navigation.js'
 import { useEffect } from 'react'
 
-
-
-
 const Topbar = () => {
   const pathname = usePathname()
   const { user } = useAppContext()
 
-  useEffect(()=>{
-   
+  useEffect(() => {
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('#navbar')
+      if (window.scrollY > 60) {
+     
+        navbar.classList.add('bg_main')
+        navbar.classList.remove('nav-class')
 
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('#navbar');
-      if (window.scrollY > 60) { // Adjust the scroll threshold as needed
-        navbar.classList.add('bg_main');
-        navbar.classList.remove('nav-class');
-        console.log('scroll')
       } else {
-        navbar.classList.remove('bg_main');
-        navbar.classList.add('nav-class');
+        navbar.classList.remove('bg_main')
+        navbar.classList.add('nav-class')
       }
-    });
- 
-  } ,[])
+    })
+  }, [])
 
   return (
-    <header id='navbar' className='h-20 nav-class  shadow-md fixed w-full z-[1000]'>
+    <header
+      id='navbar'
+      className='h-20 nav-class  shadow-md fixed w-full z-[1000]'
+    >
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />
@@ -59,7 +57,6 @@ const Topbar = () => {
                 </Link>
               </li>
             ))}
-        
           </ul>
         </div>
 

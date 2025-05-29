@@ -8,25 +8,25 @@ import { useEffect } from 'react'
 const MobileNav = () => {
   const pathname = usePathname()
 
-  useEffect(()=>{
+  useEffect(() => {
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('#navbar')
+      if (window.scrollY > 60) {
    
-
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('#navbar');
-      if (window.scrollY > 60) { // Adjust the scroll threshold as needed
-        navbar.classList.add('bg_main');
-        navbar.classList.remove('nav-class');
-        console.log('scroll')
+        navbar.classList.add('bg_main')
+        navbar.classList.remove('nav-class')
       } else {
-        navbar.classList.remove('bg_main');
-        navbar.classList.add('nav-class');
+        navbar.classList.remove('bg_main')
+        navbar.classList.add('nav-class')
       }
-    });
- 
-  } ,[])
+    })
+  }, [])
   return (
     <>
-      <div id='navbar' className='lg:hidden py-2 w-full fixed  bottom-0  nav-class  z-[1000] '>
+      <div
+        id='navbar'
+        className='lg:hidden py-2 w-full fixed  bottom-0  nav-class  z-[1000] '
+      >
         <div className='flex items-center justify-evenly h-full transition-all duration-500'>
           {navItem.map((item) => (
             <Link

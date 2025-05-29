@@ -18,8 +18,9 @@ function PageChanging({ category, totalDocument }) {
     router.push(`/${category}?pageNumber=${currentPage}`)
   }, [currentPage])
   return (
-    <div dir='ltr' className='flex overflow-x-auto sm:justify-center mt-8'>
+    <div dir='ltr' className='flex-center overflow-x-auto sm:justify-center mt-8'>
       <Pagination
+      className='bg_soft'
         dir='ltr'
         currentPage={currentPage}
         totalPages={totalAmount}

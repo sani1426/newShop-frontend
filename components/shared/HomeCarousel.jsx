@@ -3,6 +3,7 @@
 import { useEffect } from "react"
 import './homeCarousel.css'
 import Image from "next/image"
+import Link from "next/link"
 
 const HomeCarousel = ({ Movies }) => {
 
@@ -88,7 +89,7 @@ resetTimeAnimation();
               }
               </div>
               <div className='btn'>
-                <button className="px-4 py-3 rounded-md primary text-white ">مشاهده</button>
+                <Link href={`/${item?.category}/${item?._id}`} className="px-4 py-3 rounded-md primary text-white ">مشاهده</Link>
               </div>
             </div>
           </div>

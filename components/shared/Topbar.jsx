@@ -20,14 +20,17 @@ const Topbar = () => {
   const { user } = useAppContext()
 
   useEffect(()=>{
-    const nav = document.getElementById('navbar')
+   
 
-    window.addEventListener('scroll' , ()=>{
-      
-        if(Window.scrollY > 20){
-          console.log('scroll')
-        }
-    })
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+        navbar.classList.add('bg_soft');
+        console.log('scroll')
+      } else {
+        navbar.classList.remove('bg_soft');
+      }
+    });
  
   } ,[])
 

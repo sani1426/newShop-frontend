@@ -26,16 +26,18 @@ const Topbar = () => {
       const navbar = document.querySelector('#navbar');
       if (window.scrollY > 50) { // Adjust the scroll threshold as needed
         navbar.classList.add('bg_soft');
+        navbar.classList.remove('nav-class');
         console.log('scroll')
       } else {
         navbar.classList.remove('bg_soft');
+        navbar.classList.add('nav-class');
       }
     });
  
   } ,[])
 
   return (
-    <header id='navbar' className='h-20 bg-[rgba(255,255,255,.5)] backdrop:blur-xl shadow-md fixed w-full z-[1000] text-black dark:bg-[rgba(0,0,0,.5)] dark:text-white'>
+    <header id='navbar' className='h-20 nav-class  shadow-md fixed w-full z-[1000]'>
       <div className='container my-auto mx-auto flex-between h-full gap-8 lg:gap-12   px-4'>
         <Link className='flex-center ' href='/'>
           <Logo w={70} h={40} />

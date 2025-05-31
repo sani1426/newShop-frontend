@@ -71,7 +71,7 @@ const page = async ({ params }) => {
                   <Link
                     className='px-3 py-1 border-[1px] rounded-md border-white text-white text-sm'
                     key={index}
-                    href='/'
+                    href={`/movie/${genre}`}
                   >
                     {genre}
                   </Link>

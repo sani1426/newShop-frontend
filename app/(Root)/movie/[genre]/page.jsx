@@ -16,6 +16,7 @@ const page = async ({params}) => {
 
     if(data.success) {
         Movies = data?.data
+        total = data?.totalDocument
     }
   return (
     <div className='py-20 bg_soft'>

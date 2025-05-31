@@ -3,7 +3,7 @@
 import SummaryApi from '@/common'
 import AnimationCard from '@/components/shared/AnimationCard'
 import FillterBar from '@/components/shared/fillterBar'
-import PageChanging from '@/components/shared/pagination'
+// import PageChanging from '@/components/shared/pagination'
 import axios from 'axios'
 import React from 'react'
 
@@ -29,7 +29,7 @@ const page = async ({params}) => {
         ))}
       </div>
     </div>
-    <PageChanging category={`search/${genre}`} totalDocument={total} />
+    {/* <PageChanging category={`search/${genre}`} totalDocument={total} /> */}
   </div>
   )
 }

@@ -29,7 +29,7 @@ const page = async ({params}) => {
         ))}
       </div>
     </div>
-    <PageChanging category={`movie/${genre}`} totalDocument={total} />
+    <PageChanging category={`search/${genre}`} totalDocument={total} />
   </div>
   )
 }

@@ -9,7 +9,7 @@ import axios from 'axios'
 import React from 'react'
 
 const page = async ({params}) => {
-    const {genre} = params
+    const {genre} = await params
     let Movies ;
     let total ;
 

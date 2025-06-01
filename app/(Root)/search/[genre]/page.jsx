@@ -1,7 +1,8 @@
 
 
 import SummaryApi from '@/common'
-import AnimationCard from '@/components/shared/AnimationCard'
+
+import NewCard from '@/components/shared/NewCard'
 import FillterBar from '@/components/shared/fillterBar'
 import PageChanging from '@/components/shared/pagination'
 import axios from 'axios'
@@ -25,7 +26,7 @@ const page = async ({params}) => {
     <div className='container mx-auto pt-8'>
       <div className='grid grid-cols-3 lg:grid-cols-5 items-center justify-center gap-6'>
         {Movies.map((item) => (
-          <AnimationCard key={item?._id} data={item} />
+          <NewCard key={item?._id} data={item} />
         ))}
       </div>
     </div>
